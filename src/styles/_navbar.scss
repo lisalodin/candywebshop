@@ -1,0 +1,40 @@
+@use "/src/styles/mixins";
+@use "/src/styles/variables";
+
+#navbar {
+  background-color: var(--nav-base);
+}
+
+#navbarContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+#navLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+
+  .navLink {
+    background-color: var(--category-base);
+    color: var(--footer-font-color);
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+  }
+
+  .searchInput {
+    border-radius: 30px;
+    padding: 0.5rem 1.2rem;
+    border: none;
+  }
+
+  .navIcon {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+  }
+}

@@ -1,0 +1,19 @@
+@use "/src/styles/variables";
+
+$mobile-breakpoint: 480px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 1200px;
+
+:root {
+  --primary-base: #ffe6c1;
+  --secondary-base: #ffc7b9;
+  --nav-base: #f7c68e;
+  --category-base: #f78075;
+  --footer-base: #747068;
+  --alternative: #73973e;
+  --alternative-base: #d9d9d9;
+  --primary-font-color: #000000;
+  --secondary-font-color: #fbab14;
+  --teritiary-font-color: #f15c36;
+  --footer-font-color: #ffffff;
+}
