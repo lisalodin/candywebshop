@@ -1,3 +1,5 @@
+@use "/src/styles/variables" as *;
+
 @mixin desktop {
   @media screen and (min-width: $desktop-breakpoint) {
     @content;
