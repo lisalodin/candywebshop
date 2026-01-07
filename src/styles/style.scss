@@ -1,8 +1,5 @@
-@use "/src/styles/navbar.scss";
-@use "/src/styles/mainProductContainer.scss";
-@use "/src/styles/footer";
-@use "/src/styles/variables";
-
-body {
-  margin: 0;
-}
+@use "/src/styles/navbar.scss" as *;
+@use "/src/styles/mainProductContainer.scss" as *;
+@use "/src/styles/footer" as *;
+@use "/src/styles/variables" as *;
+@use "/src/styles/reset" as *;

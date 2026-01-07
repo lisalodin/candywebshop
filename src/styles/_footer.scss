@@ -1,12 +1,2 @@
-@use "/src/styles/mixins";
-@use "/src/styles/variables";
-
-footer {
-  width: 100vw;
-  height: 4rem;
-  background-color: var(--footer-base);
-  color: var(--footer-font-color);
-  position: fixed;
-  left: 0;
-  bottom: 0;
-}
+@use "/src/styles/mixins" as *;
+@use "/src/styles/variables" as *;
