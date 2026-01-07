@@ -1,2 +1,64 @@
 @use "/src/styles/mixins" as *;
 @use "/src/styles/variables" as *;
+
+h4 {
+    font-size: 14px;
+    text-decoration: underline;
+
+    @include tablet {
+        font-size: 18px;
+    }
+
+    @include desktop {
+        font-size: 18px;
+    }
+}
+
+footer {
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    height: 7rem;
+    background-color: var(--grey-base);
+    color: var(--white-font-color);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    @include tablet {
+        height: 8.5rem;
+    }
+
+    @include desktop {
+        height: 8.5rem;
+    }
+}
+
+.footercolumns {
+    display: flex;
+    font-size: 1rem;
+    line-height: 0.3rem;
+    justify-content: space-evenly;
+    font-size: 12px;
+
+    @include tablet {
+        font-size: 14px;
+    }
+
+    @include desktop {
+        font-size: 14px;
+    }
+}
+
+.copyright {
+    text-align: center;
+    margin: 0.5rem;
+    font-size: 9px;
+
+    @include tablet {
+        font-size: 14px;
+    }
+
+    @include desktop {
+        font-size: 14px;
+    }
+}
