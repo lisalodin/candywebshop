@@ -1,0 +1,42 @@
+@use "/src/styles/mixins" as *;
+@use "/src/styles/variables" as *;
+
+.shoppingCart h2 {
+  font-family: var(--modak);
+  color: var(--secondary-font-color);
+  -webkit-text-stroke: 0.1px #000000;
+  text-shadow: 2px 2px 4px rgba($color: #000000, $alpha: 0.5);
+  text-align: center;
+}
+
+.shoppingCart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#cartItems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+#cartTotal {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+  font-family: var(--roboto);
+}
+
+#buyBtn {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: var(--secondary-button);
+  color: var(--white-font-color);
+  font-family: var(--roboto);
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}

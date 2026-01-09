@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <title>Godisråttan</title>
+</head>
+
+<body>
+  <section id="header"></section>
+  <div class="header-banner">
+    <p>Fri frakt vid köp över 200kr. Annars 49kr för hemleverans.</p>
+  </div>
+  <div class="header-logo">
+    <img src="/src/assets/logo/godisrattan_logotyp.png" alt="Godisråttan">
+  </div>
+  </section>
+
+
+  <nav id="navbar">
+    <div id="navbarContainer">
+      <button id="menuToggle" aria-label="Öppna meny">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul id="navLinks">
+        <li><a class="navLink" href="/src/pages/product.html">Lösgodis</a></li>
+        <li><a class="navLink" href="#">Tema-boxar</a></li>
+        <li><a class="navLink" href="#">Utländskt</a></li>
+        <li>
+          <input class="searchInput" type="text" placeholder="Sök produkt..." />
+        </li>
+        <li>
+          <a class="navIcon" href="/src/pages/shoppingCart.html" aria-label="varukorg"><img src="/src/assets/ikoner/shopping_cart.svg" width="30px"
+              alt="Varukorg" /></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="shoppingCart">
+    <h2>Varukorg</h2>
+    <div id="cartItems"><img src="/src/assets/ikoner/cartTest.png" width="500px" alt="test-bild">
+        <img src="/src/assets/ikoner/cartTest.png" width="500px" alt="test-bild">
+    </div>
+    <div id="cartTotal">
+        <div id="sumText">Total summa:</div>
+        <div id="totalSum">349kr</div>
+    </div>
+
+    <button id="buyBtn">Gå till kassan</button>
+
+  
+  </section>
+
+
+
+
+
+  <section id="footer">
+    <footer>
+      <div class="footercontainer">
+        <div class="footercolumns">
+          <div class="footercolumn">
+            <h4>Kontakta oss</h4>
+            <p>info@godisbutiken.se</p>
+            <p>012-345 67 89</p>
+          </div>
+          <div class="footercolumn">
+            <h4>Hitta hit</h4>
+            <p>Godisvägen 88
+            <p>Stockholm 161 22 </p>
+          </div>
+          <div class="footercolumn">
+            <h4>Öppettider</h4>
+            <p>mån-fre 11-17</p>
+            <p>fre-sön 11-21</p>
+          </div>
+        </div>
+        <div class="copyright">
+          &copy; 2024 Godisbutiken. Innehållet på denna webbplats är upphovsrättsskyddat och tillhör Godisbutiken AB.
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
