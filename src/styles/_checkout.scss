@@ -2,35 +2,43 @@
 @use "mixins" as *;
 
 #checkout {
-  background-color: var(--primary-base);
+  background-color: var(--secondary-base);
   min-height: 100vh;
   padding: 20px;
 }
 
 .checkout-container {
-  max-width: 500px;
+  max-width: 900px;
   margin: 0 auto;
+  background-color: var(--primary-base);
+  border-radius: 16px;
+  padding: 20px;
+  padding-top: 2px;
 
   h1 {
     font-family: var(--modak);
+    font-size: 2.5rem;
     color: var(--secondary-font-color);
     -webkit-text-stroke: 0.1px #000000;
     text-shadow: 2px 2px 4px rgba($color: #000000, $alpha: 0.5);
     text-align: center;
-    margin-top: 60px;
     margin-bottom: 10px; 
   }
 }
 
 .checkout-section {
+  width: 500px;
   background-color: var(--white-font-color);
   border-radius: 12px;
   padding: 20px;
   margin-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
 
   h2 {
     font-size: 18px;
     margin-bottom: 16px;
+    letter-spacing: normal;
   }
 }
 
@@ -69,6 +77,9 @@
 
 .checkout-btn {
   width: 100%;
+  max-width: 545px; 
+  margin: 0 auto;
+  display: block; 
   padding: 16px;
   background-color: var(--primary-button);
   color: var(--white-font-color);
