@@ -16,7 +16,11 @@ h2 {
     font-size: 2.5rem;
     color: var(--secondary-font-color);
     text-align: center;
-    margin: 1rem 0;
+    height: 3.5rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    margin: 0;
     -webkit-text-stroke: 0.1px #000000;
     text-shadow: 2px 2px 4px rgba($color: #000000, $alpha: 0.5);
 
@@ -41,7 +45,7 @@ nav {
     flex-direction: row;
     justify-content: center;
     gap: 1rem;
-    padding: 2rem;
+    padding: 0 1rem 0 1rem;
     font-family: var(--roboto);
 }
 
@@ -159,15 +163,21 @@ nav {
     }
 }
 
-#productCardGrid {
+#productCardGrid,
+#productCardGrid2 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
     padding: 2rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0;
 }
+
+#productCardGrid2 {
+    margin-top: 1rem;
+}
+
 
 .productCard {
     background-color: var(--white-font-color);
@@ -231,14 +241,16 @@ button {
     font-size: 14px;
 }
 
-.showMoreBtnContainer {
+#showMoreBtnContainer {
+    width: 100%;
+    height: fit-content;
     display: flex;
     justify-content: center;
-    margin-bottom: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
-.showMoreBtn {
-    text-align: center;
+#showMoreBtn {
     width: 10rem;
     height: 3rem;
     font-family: var(--pacifico);
@@ -246,8 +258,20 @@ button {
     border: none;
     border-radius: 20px;
     background-color: var(--white-font-color);
+    text-align: center;
 }
 
-.showMoreBtn:hover {
+#showMoreBtn:hover {
     background-color: var(--grey-base);
 }
+
+#productCardGrid2 {
+    display: none;
+}
+
+#productCardGrid2.expanded {
+    display: flex;
+    padding-top: 0;
+}
+
+#showMoreBtn.expanded {}

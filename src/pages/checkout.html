@@ -1,113 +1,107 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <title>Godisråttan</title>
 </head>
+
 <body>
-    <section id="header"></section>
+  <section id="header">
     <div class="header-banner">
       <p>Fri frakt vid köp över 200kr. Annars 49kr för hemleverans.</p>
     </div>
     <div class="header-logo">
       <img src="/src/assets/logo/godisrattan_logotyp.png" alt="Godisråttan">
     </div>
-    </section>
-    
+  </section>
 
-    <nav id="navbar">
-      <div id="navbarContainer">
-        <button id="menuToggle" aria-label="Öppna meny">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-        <ul id="navLinks">
-          <li><a class="navLink" href="#">Lösgodis</a></li>
-          <li><a class="navLink" href="#">Tema-boxar</a></li>
-          <li><a class="navLink" href="#">Utländskt</a></li>
-          <li>
-            <input
-              class="searchInput"
-              type="text"
-              placeholder="Sök produkt..."
-            />
-          </li>
-          <li>
-            <a class="navIcon" href="#" aria-label="varukorg"
-              ><img
-                src="/src/assets/ikoner/shopping_cart.svg"
-                width="30px"
-                alt="Varukorg"
-            /></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
 
-    <section id="checkout">
-  <div class="checkout-container">
-    <h1>Kassa</h1>
-     <div class="checkout-section">
-      <h2>Leveransuppgifter</h2>
-      <div class="form-group">
-        <label for="firstname">Förnamn</label>
-        <input type="text" id="firstname" placeholder="Förnamn">
-      </div>
-      <div class="form-group">
-        <label for="lastname">Efternamn</label>
-        <input type="text" id="lastname" placeholder="Efternamn">
-      </div>
-      <div class="form-group">
-        <label for="address">Adress</label>
-        <input type="text" id="address" placeholder="Adress">
-      </div>
-      <div class="form-group">
-        <label for="email">E-post</label>
-        <input type="email" id="email" placeholder="E-post">
-      </div>
-      <div class="form-group">
-        <label for="phone">Telefon</label>
-        <input type="tel" id="phone" placeholder="Telefon">
-      </div>
+  <nav id="navbar">
+    <div id="navbarContainer">
+      <button id="menuToggle" aria-label="Öppna meny">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul id="navLinks">
+        <li><a class="navLink" href="/src/pages/product.html">Lösgodis</a></li>
+        <li><a class="navLink" href="#">Tema-boxar</a></li>
+        <li><a class="navLink" href="#">Utländskt</a></li>
+        <li>
+          <input class="searchInput" type="text" placeholder="Sök produkt..." />
+        </li>
+        <li>
+          <a class="cartIcon" href="/src/pages/shoppingCart.html" aria-label="varukorg"><img
+              src="/src/assets/ikoner/shopping_cart.svg" width="30px" alt="Varukorg" /></a>
+        </li>
+      </ul>
     </div>
+  </nav>
 
-    <!-- Fraktmetod -->
-    <div class="checkout-section">
-      <h2>Fraktmetod</h2>
-      <div class="radio-group">
-        <label>
-          <input type="radio" name="shipping" value="budbee">
-          Budbee
-        </label>
-        <label>
-          <input type="radio" name="shipping" value="postbox">
-          Postlåda
-        </label>
+  <section id="checkout">
+    <div class="checkout-container">
+      <h1>Kassa</h1>
+      <div class="checkout-section">
+        <h2>Leveransuppgifter</h2>
+        <div class="form-group">
+          <label for="firstname">Förnamn</label>
+          <input type="text" id="firstname" placeholder="Förnamn">
+        </div>
+        <div class="form-group">
+          <label for="lastname">Efternamn</label>
+          <input type="text" id="lastname" placeholder="Efternamn">
+        </div>
+        <div class="form-group">
+          <label for="address">Adress</label>
+          <input type="text" id="address" placeholder="Adress">
+        </div>
+        <div class="form-group">
+          <label for="email">E-post</label>
+          <input type="email" id="email" placeholder="E-post">
+        </div>
+        <div class="form-group">
+          <label for="phone">Telefon</label>
+          <input type="tel" id="phone" placeholder="Telefon">
+        </div>
       </div>
-    </div>
 
-    <!-- Betalningsmetod -->
-    <div class="checkout-section">
-      <h2>Betalningsmetod</h2>
-      <div class="radio-group">
-        <label>
-          <input type="radio" name="payment" value="bank">
-          Internetbank
-        </label>
-        <label>
-          <input type="radio" name="payment" value="klarna">
-          Klarna
-        </label>
+      <!-- Fraktmetod -->
+      <div class="checkout-section">
+        <h2>Fraktmetod</h2>
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="shipping" value="budbee">
+            Budbee
+          </label>
+          <label>
+            <input type="radio" name="shipping" value="postbox">
+            Postlåda
+          </label>
+        </div>
       </div>
-    </div>
-    <button class="checkout-btn">Betala</button>
-  </div>
-</section>
 
-  
+      <!-- Betalningsmetod -->
+      <div class="checkout-section">
+        <h2>Betalningsmetod</h2>
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="payment" value="bank">
+            Internetbank
+          </label>
+          <label>
+            <input type="radio" name="payment" value="klarna">
+            Klarna
+          </label>
+        </div>
+      </div>
+      <button class="checkout-btn">Betala</button>
+    </div>
+  </section>
+
+
 
 
 
@@ -140,4 +134,5 @@
 
   <script type="module" src="/src/main.ts"></script>
 </body>
+
 </html>

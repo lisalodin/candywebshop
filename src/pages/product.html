@@ -9,15 +9,14 @@
 </head>
 
 <body>
-    <section id="header"></section>
-    <div class="header-banner">
-        <p>Fri frakt vid köp över 200kr. Annars 49kr för hemleverans.</p>
-    </div>
-    <div class="header-logo">
-        <img src="/src/assets/logo/godisrattan_logotyp.png" alt="Godisråttan">
-    </div>
+    <section id="header">
+        <div class="header-banner">
+            <p>Fri frakt vid köp över 200kr. Annars 49kr för hemleverans.</p>
+        </div>
+        <div class="header-logo">
+            <img src="/src/assets/logo/godisrattan_logotyp.png" alt="Godisråttan">
+        </div>
     </section>
-
 
     <nav id="navbar">
         <div id="navbarContainer">
@@ -34,16 +33,16 @@
                     <input class="searchInput" type="text" placeholder="Sök produkt..." />
                 </li>
                 <li>
-                    <a class="navIcon" href="#" aria-label="varukorg"><img src="/src/assets/ikoner/shopping_cart.svg"
-                            width="30px" alt="Varukorg" /></a>
+                    <a class="cartIcon" href="/src/pages/shoppingCart.html" aria-label="varukorg"><img
+                            src="/src/assets/ikoner/shopping_cart.svg" width="30px" alt="Varukorg" /></a>
                 </li>
             </ul>
         </div>
     </nav>
 
     <div>
-        <h1 id="productPageTitle">Lösgodis</h1>
         <div id=productPageContainer>
+            <h1 id="productPageTitle">Lösgodis</h1>
             <div id="categoryGrid">
                 <div id="sott">
                     <img id="categoryImg" src="/src/assets/kategoribilder/analia-baggiano-AHegElpiVj4-unsplash.jpg"
@@ -96,7 +95,7 @@
                 </div>
                 <div class="productCard">
                     <div class="productCardImageContainer">
-                        <img class="productCardImg" src="/src/assets/produktbilder/fruity.jpg" alt="fruitygodis">
+                        <img class="productCardImg" src="/src/assets/produktbilder/fruity.jpg" alt="fruity godis">
                     </div>
                     <div class="productTextContainer">
                         <h3>Farmors Fruity</h3>
@@ -106,11 +105,10 @@
                             Köp
                         </button>
                     </div>
-
                 </div>
                 <div class="productCard">
                     <div class="productCardImageContainer">
-                        <img class="productCardImg" src="/src/assets/produktbilder/fizzy.jpg" alt="fizzygodis">
+                        <img class="productCardImg" src="/src/assets/produktbilder/fizzy.jpg" alt="fizzy godis">
                     </div>
                     <div class="productTextContainer">
                         <h3>FizzyBombz</h3>
@@ -122,10 +120,65 @@
                     </div>
                 </div>
             </div>
-            <div class="showMoreBtnContainer">
-                <button class="showMoreBtn" onclick="showMore()">
+            <div id="showMoreBtnContainer">
+                <button id="showMoreBtn">
                     Visa mer
                 </button>
+            </div>
+            <div id="productCardGrid2">
+                <div class="productCard">
+                    <div class="productCardImageContainer">
+                        <img class="productCardImg" src="/src/assets/produktbilder/suraremmar.jpg" alt="sura remmar">
+                    </div>
+                    <div class="productTextContainer">
+                        <h3>SourSwirls</h3>
+                        <p class productDescription>Svindlande smak!</p>
+                        <p class="priceSmall">8,90:-/hg</p>
+                        <button class="buyBtnSmall">
+                            Köp
+                        </button>
+                    </div>
+                </div>
+                <div class="productCard">
+                    <div class="productCardImageContainer">
+                        <img class="productCardImg" src="/src/assets/produktbilder/mashmallows.jpg" alt="marshmallows">
+                    </div>
+                    <div class="productTextContainer">
+                        <h3>Mashmallows</h3>
+                        <p class productDescription>Fantastiskt fluffiga</p>
+                        <p class="priceSmall">29:-/st</p>
+                        <button class="buyBtnSmall">
+                            Köp
+                        </button>
+                    </div>
+                </div>
+                <div class="productCard">
+                    <div class="productCardImageContainer">
+                        <img class="productCardImg" src="/src/assets/produktbilder/hjartan.jpg" alt="hjärtformat godis">
+                    </div>
+                    <div class="productTextContainer">
+                        <h3>Lovehearts</h3>
+                        <p class productDescription>Sprider kärlek!</p>
+                        <p class="priceSmall">8,90:-/hg</p>
+                        <button class="buyBtnSmall">
+                            Köp
+                        </button>
+                    </div>
+
+                </div>
+                <div class="productCard">
+                    <div class="productCardImageContainer">
+                        <img class="productCardImg" src="/src/assets/produktbilder/bonor.jpg" alt="bönformat godis">
+                    </div>
+                    <div class="productTextContainer">
+                        <h3>DreamBeans</h3>
+                        <p class productDescription>Runda, söta & fina</p>
+                        <p class="priceSmall">8,90:-/hg</p>
+                        <button class="buyBtnSmall">
+                            Köp
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
