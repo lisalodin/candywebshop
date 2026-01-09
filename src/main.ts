@@ -1,4 +1,4 @@
-import { products } from "./services/products";
+import { products } from "./data/products";
 import "./styles/style.scss";
 import { addToCart } from "./utils/addToCart";
 import { mobileMenu } from "./utils/mobileMenu";

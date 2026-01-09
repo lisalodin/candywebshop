@@ -6,5 +6,5 @@ export const products: Product[] = [
         "Sura karameller",
         "Producerade i Sverige",
         8.90
-    )
+    ),
 ];
