@@ -8,7 +8,7 @@
 }
 
 .checkout-container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   background-color: var(--primary-base);
   border-radius: 16px;
@@ -27,13 +27,15 @@
 }
 
 .checkout-section {
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
   background-color: var(--white-font-color);
   border-radius: 12px;
   padding: 20px;
   margin-bottom: 16px;
   margin-left: auto;
   margin-right: auto;
+  box-sizing: border-box;
 
   h2 {
     font-size: 18px;
