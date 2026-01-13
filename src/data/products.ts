@@ -25,4 +25,3 @@ export const products: Product[] = [
         "Med sprudlande smak!",
         8.9
     )
-];
