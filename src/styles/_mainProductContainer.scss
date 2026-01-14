@@ -9,6 +9,10 @@
   justify-content: space-between;
   flex: 1;
 
+  &:hover {
+    box-shadow: -5px 5px 20px rgba($color: #000000, $alpha: 0.1);
+  }
+
   @include desktop {
     width: 70%;
     margin: 16px auto;
@@ -62,6 +66,7 @@
       font-size: 2rem;
       font-weight: bold;
       margin: 0.5rem 0;
+      cursor: pointer;
 
       &:hover {
         background-color: var(--hover-button);

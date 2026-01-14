@@ -68,6 +68,10 @@ nav {
     justify-content: center;
     position: relative;
     text-align: center;
+
+    &:hover {
+    box-shadow: -5px 5px 15px rgba($color: #000000, $alpha: 0.2);
+  }
 }
 
 #overlayTextSott {
@@ -86,6 +90,10 @@ nav {
     align-items: center;
     position: relative;
     justify-content: center;
+
+    &:hover {
+    box-shadow: -5px 5px 15px rgba($color: #000000, $alpha: 0.2);
+  }
 }
 
 #overlayTextSurt {
@@ -104,6 +112,10 @@ nav {
     align-items: center;
     position: relative;
     justify-content: center;
+
+    &:hover {
+    box-shadow: -5px 5px 15px rgba($color: #000000, $alpha: 0.2);
+  }
 }
 
 #overlayTextSalt {
@@ -199,6 +211,10 @@ nav {
     justify-content: center;
     position: relative;
     text-align: center;
+
+    &:hover {
+    box-shadow: -5px 5px 10px rgba($color: #000000, $alpha: 0.2);
+  }
 }
 
 .productCardImageContainer {
@@ -227,6 +243,7 @@ nav {
     color: var(--white-font-color);
     font-size: 1rem;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .buyBtnSmall:hover {
@@ -267,10 +284,12 @@ button {
     border-radius: 20px;
     background-color: var(--white-font-color);
     text-align: center;
+    cursor: pointer;
 }
 
 #showMoreBtn:hover {
-    background-color: var(--grey-base);
+    color: var(--white-font-color);
+    background-color: var(--primary-font-color);
 }
 
 #productCardGrid2 {
