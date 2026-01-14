@@ -1,3 +1,5 @@
+//JESPER: bör ligga i mapp - pages
+
 document
     .getElementById("showMoreBtn")
     ?.addEventListener("click", showMoreHandleClick);

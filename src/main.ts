@@ -42,9 +42,11 @@ document.getElementById("buyBtnBig")?.addEventListener("click", () => {
   const updatedCart = addToCart(products[0]); // Adderar huvudprodukten till varukorgen
   console.log("Varukorg:", updatedCart); // Loggar den uppdaterade varukorgen till konsolen
 });
+//JESPER: flytta upp under createHtmlMainProduct
 
 
 initProductPageCart(); // Initierar köpknappar på produktsidan
+//JESPER: flytta upp under createHtmlProductPage 
 
 // Ladda varukorgen om vi är på shoppingCart-sidan
 const cartItemsContainer = document.getElementById("cartItems");

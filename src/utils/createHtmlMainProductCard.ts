@@ -1,5 +1,7 @@
 import { products } from "../data/products";
 
+//JESPER: bör ligga i mapp - pages/
+
 //funktion - skapa html för produkten på landing-page
 export const createHtmlMainProductCard = () => {
     const main = document.getElementById("main");
