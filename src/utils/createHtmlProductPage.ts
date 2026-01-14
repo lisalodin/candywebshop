@@ -35,6 +35,7 @@ export const createHtmlProductPage = (
 
     productPageContainer.innerHTML = `
     <div id="productCardGrid"></div>
+    <div id="productCardGrid2"></div>
 
     `;
 
@@ -42,9 +43,23 @@ export const createHtmlProductPage = (
         "#productCardGrid"
     ) as HTMLDivElement;
 
-    // visa första 4 produktkorten
+    const productGrid2 = productPageContainer.querySelector(
+        "#productCardGrid2"
+    ) as HTMLDivElement;
+
+    // första 4 produktkorten
     products.slice(0, 4).forEach(product => {
         productGrid.appendChild(createProductCard(product));
+
+    });
+
+    const showMoreBtnContainer = document.getElementById("showMoreBtnContainer");
+    if (showMoreBtnContainer !== null) {
+        productGrid.appendChild(showMoreBtnContainer)
+    };
+    // sista 4 produktkorten
+    products.slice(4, 8).forEach(product => {
+        productGrid2.appendChild(createProductCard(product));
     });
 
     return productPageContainer;

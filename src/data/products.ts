@@ -34,7 +34,7 @@ export const products: Product[] = [
         8.9
     ),
     new Product(
-        "/src/assets/produktbilder/marshmallows.jpg",
+        "/src/assets/produktbilder/mashmallows.jpg",
         "Marshmallows",
         "Fantastiskt fluffiga",
         8.9
@@ -47,7 +47,7 @@ export const products: Product[] = [
     ),
     new Product(
         "/src/assets/produktbilder/bonor.jpg",
-        "Deambeans",
+        "Dreambeans",
         "Runda, söta & fina",
         8.9
     )
