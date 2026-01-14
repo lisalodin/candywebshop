@@ -13,6 +13,7 @@
 #cartContainer {
   border-radius: 30px;
   padding: 2rem;
+  margin-bottom: 200px;
 }
 
 .shoppingCart h2 {
@@ -20,7 +21,6 @@
   color: var(--secondary-font-color);
   -webkit-text-stroke: 0.1px #000000;
   text-shadow: 2px 2px 4px rgba($color: #000000, $alpha: 0.5);
-
   text-align: center;
 }
 
@@ -29,7 +29,7 @@
   grid-template-columns: auto 1fr auto auto auto;
   align-items: center;
   gap: 1rem;
-
+  margin-bottom: 1rem; // inlagd av lisa
   background-color: var(--white-font-color);
   padding: 1rem;
   border-radius: 30px;
@@ -62,7 +62,7 @@
   flex-direction: column;
   align-items: center;
   margin: 2rem;
-
+  
   .priceHead {
     font-size: 0.7rem;
   }

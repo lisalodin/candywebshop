@@ -8,6 +8,10 @@ import { checkoutBtn } from "./utils/checkoutBtn";
 import { createHtmlProductPage } from "../src/utils/createHtmlProductPage";
 import { addToCart } from "./utils/addToCart";
 import "./utils/showmoreBtn";
+import { initProductPageCart } from "./utils/productPageCart";
+import { loadCart } from "./utils/cartStorage";
+import { createHtmlCartItems } from "./utils/createHtmlCartItems";
+
 
 mobileMenu();
 
@@ -23,9 +27,12 @@ showMoreHandleClick();
 checkoutBtn();
 
 //detta gör HTML för produkter synligt på produktsidan.
-const main = document.querySelector("main") as HTMLElement;
-main.appendChild(createHtmlProductPage(products));
+const main = document.querySelector("main");
+if (main) {
+  main.appendChild(createHtmlProductPage(products));
+}
 
+// Klick-event för köp-knappen på produktsidan
 document.getElementById("buyBtnBig")?.addEventListener("click", () => {
   // Adderar en klickhändelse till köpknappen
   const updatedCart = addToCart(products[0]); // Adderar huvudprodukten till varukorgen
@@ -37,3 +44,12 @@ document.getElementById("buyBtnBig")?.addEventListener("click", () => {
 //anrop funktion landing-page - lägg till produkt från produkt-listan(products) till varukorg(shoppingCart)
 //mainAddToCart(products, shoppingCart);
 // });
+
+initProductPageCart(); // Initierar varukorgen på produktsidan
+
+// Ladda varukorgen om vi är på shoppingCart-sidan
+const cartItemsContainer = document.getElementById("cartItems");
+if (cartItemsContainer) {
+  const cart = loadCart();
+  createHtmlCartItems(cart);
+}

@@ -1,56 +1,45 @@
 import type { CartItem } from "../models/CartItem";
+import { saveCart } from "./cartStorage";
 
-// const cartItems = document.getElementById("cartItems");
-
-// export const createHtmlCartItems = (shoppingCart: CartItem[]) => {
-//   shoppingCart.forEach((item) => {
-//     const name = document.createElement("h5"); // Skapa ett h5-element för produktnamnet
-
-//     name.innerHTML = item.product.name; // Sätt produktnamnet som innehåll
-
-//    console.log(`${item.product.name} x ${item.quantity}`); // Logga produktnamn och kvantitet till konsolen
-//    // cartItems?.appendChild(name); // Lägg till h5-elementet i cartItems-behållaren
-//   });
-// };
-import { Product } from "../models/Product";
-
+ 
 //funktion - skapa html för varukorgen
-export const createHtmlCartItems = (shoppingCart: Product[]) => {
-  const cartItemsContainer = document.getElementById(
+export const createHtmlCartItems = (shoppingCart: CartItem[]) => { // Tar in varukorgen som parameter
+  const cartItemsContainer = document.getElementById( 
     "cartItems"
   ) as HTMLDivElement;
-  const cartSum = document.getElementById("cartSum") as HTMLSpanElement;
-
+  const cartSum = document.getElementById("cartSum") as HTMLSpanElement; // Total summa i varukorgen
+ 
+  if (!cartItemsContainer) return; // Om containern inte finns, avsluta funktionen
   //Tömmer containern innan vi börjar
-  cartItemsContainer.innerHTML = "";
-
-  let total = 0;
-
+  cartItemsContainer.innerHTML = ""; // Rensar innehållet i cartItemsContainer
+ 
+  let total = 0; // Variabel för att hålla koll på totalsumman
+ 
   //loopa varukorgen (behöver utvecklas...)
-  shoppingCart.forEach((product, index) => {
-    total += product.price * product.quantity;
-
+  shoppingCart.forEach((item, index) => {
+    total += item.product.price * item.quantity;
+ 
     //Skapar ett cart item
     const cartItem = document.createElement("div");
     cartItem.className = "cartItem";
-
+ 
     //Produktbilden
     const img = document.createElement("img");
     img.className = "cartImg";
-    img.src = product.image;
-    img.alt = product.name;
+    img.src = item.product.image;
+    img.alt = item.product.name;
     //Skapar en div där info om produkten ska vara
     const cartInfo = document.createElement("div");
     cartInfo.className = "cartInfo";
     //Produktsnamn P
     const productName = document.createElement("p");
     productName.className = "productName";
-    productName.textContent = product.name;
+    productName.textContent = item.product.name;
     //Produktsinfo P
     const productInfo = document.createElement("p");
     productInfo.className = "productInfo";
-    productInfo.textContent = product.info;
-
+    productInfo.textContent = item.product.info;
+ 
     cartInfo.appendChild(productName);
     cartInfo.appendChild(productInfo);
     //Antal div
@@ -63,74 +52,81 @@ export const createHtmlCartItems = (shoppingCart: Product[]) => {
     //Antal produkter kontroll +/-
     const qtyControls = document.createElement("div");
     qtyControls.className = "qtyControls";
-
+    // Minus knapp
     const minusBtn = document.createElement("button");
     minusBtn.className = "minusBtn";
     minusBtn.textContent = "-";
-
+    // Antal produkter
     const numOfProducts = document.createElement("span");
     numOfProducts.className = "numOfProducts";
-    numOfProducts.textContent = product.quantity.toString(); //Kanske ställer till det vid räkning
-
+    numOfProducts.textContent = item.quantity.toString(); //Kanske ställer till det vid räkning
+    // Plus knapp
     const plusBtn = document.createElement("button");
     plusBtn.className = "plusBtn";
     plusBtn.textContent = "+";
 
+    // Event listeners för knapparna
     minusBtn.addEventListener("click", () => {
-      if (product.quantity > 1) {
-        product.quantity--;
+      if (item.quantity > 1) { // Om antal är större än 1, minska med 1
+        item.quantity--;
       } else {
-        shoppingCart.splice(index, 1);
+        shoppingCart.splice(index, 1); // Annars ta bort varan från varukorgen
       }
+      saveCart(shoppingCart); // Spara ändringarna i lagringen
+      createHtmlCartItems(shoppingCart); // Uppdatera HTML:en för varukorgen
+    });
+ 
+    plusBtn.addEventListener("click", () => { // När plus knappen klickas
+      item.quantity++; // Öka antal med 1
+      saveCart(shoppingCart);
       createHtmlCartItems(shoppingCart);
     });
-
-    plusBtn.addEventListener("click", () => {
-      product.quantity++;
-      createHtmlCartItems(shoppingCart);
-    });
-
+ 
     qtyControls.appendChild(minusBtn);
     qtyControls.appendChild(numOfProducts);
     qtyControls.appendChild(plusBtn);
-
+ 
     cartQty.appendChild(qtyText);
     cartQty.appendChild(qtyControls);
-
+ 
     //Priset på varan i item
     const cartItemPriceContainer = document.createElement("div");
     cartItemPriceContainer.className = "cartItemPriceContainer";
-
+    // Pris rubrik
     const priceHead = document.createElement("span");
     priceHead.className = "priceHead";
     priceHead.textContent = "Pris";
-
+    // Pris på item
     const cartItemPrice = document.createElement("span");
     cartItemPrice.className = "cartItemPrice";
-    cartItemPrice.textContent = product.price * product.quantity + " kr"; //Räknar ut priset beroende på antal
-
+    cartItemPrice.textContent = (item.product.price * item.quantity).toFixed(2) + " kr"; //Räknar ut priset beroende på antal
+    // Bygg ihop pris delen
     cartItemPriceContainer.appendChild(priceHead);
     cartItemPriceContainer.appendChild(cartItemPrice);
-
     //Ta bort item
     const removeBtn = document.createElement("button");
     removeBtn.className = "removeBtn";
     removeBtn.textContent = "x";
     removeBtn.addEventListener("click", () => {
       shoppingCart.splice(index, 1);
+      saveCart(shoppingCart);
       createHtmlCartItems(shoppingCart);
     });
-
+ 
     // Bygg ihop hela kortet
     cartItem.appendChild(img);
     cartItem.appendChild(cartInfo);
     cartItem.appendChild(cartQty);
     cartItem.appendChild(cartItemPriceContainer);
     cartItem.appendChild(removeBtn);
-
+ 
     cartItemsContainer.appendChild(cartItem);
   }); // Hit går shoppingCart.forEach
-
+ 
+ if(cartSum) { // Kollar om cartSum finns
+    cartSum.textContent = `${total.toFixed(2)}kr`; // Uppdatera totalsumman med två decimale
+  }
+ 
   // Uppdatera totalsumman
   cartSum.textContent = `${total} kr`;
 }; //
