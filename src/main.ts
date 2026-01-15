@@ -2,9 +2,9 @@ import { products } from "./data/products";
 import "./styles/style.scss";
 import { mobileMenu } from "./utils/mobileMenu";
 import { showMoreHandleClick } from "./utils/showmoreBtn";
-import "./utils/goToCartBtn";
+import "./utils/goToCheckoutBtn";
 import { createHtmlMainProductCard } from "./utils/createHtmlMainProductCard";
-import { goToCartBtn } from "./utils/goToCartBtn";
+import { goToCheckoutBtn } from "./utils/goToCheckoutBtn";
 import { createHtmlProductPage } from "../src/utils/createHtmlProductPage";
 import { addToCart } from "./utils/addToCart";
 import "./utils/showmoreBtn";
@@ -25,7 +25,7 @@ createHtmlMainProductCard();
 showMoreHandleClick();
 
 //Knappen "Gå till kassan" i varukorgen. Vid klick skickas man till "Kassa" sidan.
-goToCartBtn();
+goToCheckoutBtn();
 
 // Popup vid klick på betalaknappen i kassan
 payBtn();
