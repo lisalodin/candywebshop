@@ -1,5 +1,6 @@
 import type { CartItem } from "../models/CartItem";
 import { saveCart } from "./cartStorage";
+import { updateCartBadge } from "./cartIconQuantity";
 
 export const increaseQuantity = (
   cart: CartItem[],
@@ -33,4 +34,5 @@ export const removeItem = (
   cart.splice(index, 1);
   saveCart(cart);
   render(cart);
+  updateCartBadge(cart);
 };

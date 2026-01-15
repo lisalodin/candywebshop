@@ -1,6 +1,7 @@
 import type { CartItem } from "../models/CartItem";
-import { getCartTotalPrice, getItemTotalPrice } from "./cartCalculations";
+import { getCartTotalPrice, getItemTotalPrice, getCartTotalQuantity } from "./cartCalculations";
 import { increaseQuantity, decreaseQuantity, removeItem } from "./cartActions";
+import { updateCartBadge } from "./cartIconQuantity"; //Wilma:jag la till denna  funktion som jag anropar i olika utils när förändringar på antal sker (så det uppdateras bredvid cart ikonen)
 
 //funktion - skapa html för varukorgen
 export const createHtmlCartItems = (shoppingCart: CartItem[]) => {
@@ -15,6 +16,7 @@ export const createHtmlCartItems = (shoppingCart: CartItem[]) => {
   cartItemsContainer.innerHTML = ""; // Rensar innehållet i cartItemsContainer
 
   const total = getCartTotalPrice(shoppingCart);
+  const totalQuantity = getCartTotalQuantity(shoppingCart);
 
   shoppingCart.forEach((item, index) => {
     //Skapar ett cart item
@@ -145,4 +147,19 @@ export const createHtmlCartItems = (shoppingCart: CartItem[]) => {
   cartTotalWrapper.appendChild(cartTotalPrice);
 
   cartTotal.appendChild(cartTotalWrapper);
+
+  const cartIcon = document.querySelector(".cartIcon") as HTMLElement;
+
+  if (cartIcon) {
+    cartIcon
+      .querySelector(".shoppingCartNumberContainer")
+      ?.remove();
+
+    const badge = document.createElement("div");
+    badge.className = "shoppingCartNumberContainer";
+    badge.textContent = totalQuantity.toString();
+
+    cartIcon.appendChild(badge);
+  }
+  updateCartBadge(shoppingCart);//wilma: detta anropar funktion som gör att när man tar bort, ökar eller minskar så ändras siffran bredvid shoppingcarticon till rätt antal produkter
 };

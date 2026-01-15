@@ -9,3 +9,10 @@ export const getCartTotalPrice = (cart: CartItem[]): number => {
     return sum + getItemTotalPrice(item);
   }, 0);
 };
+
+export const getCartTotalQuantity = (cart: CartItem[]): number => {
+  return cart.reduce((sum, item) => {
+    return sum + item.quantity;
+  }, 0);
+};
+

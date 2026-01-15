@@ -12,9 +12,14 @@ import { initProductPageCart } from "./utils/productPageCart";
 import { loadCart } from "./utils/cartStorage";
 import { createHtmlCartItems } from "./utils/createHtmlCartItems";
 import { payBtn } from "./utils/payBtn";
+import { updateCartBadge } from "./utils/cartIconQuantity";
+
 
 
 mobileMenu();
+
+const cart = loadCart();
+updateCartBadge(cart);
 
 //anrop funktion - skapa html för mainProductCard på landing-page för att kunna lägga objektet i varukorgen
 createHtmlMainProductCard();
@@ -41,6 +46,7 @@ document.getElementById("buyBtnBig")?.addEventListener("click", () => {
   // Adderar en klickhändelse till köpknappen
   const updatedCart = addToCart(products[0]); // Adderar huvudprodukten till varukorgen
   console.log("Varukorg:", updatedCart); // Loggar den uppdaterade varukorgen till konsolen
+  updateCartBadge(updatedCart);
 });
 
 

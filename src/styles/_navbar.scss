@@ -88,6 +88,7 @@
   .cartIcon {
     display: flex;
     align-items: center;
+    text-decoration: none;
   }
 }
 
@@ -107,6 +108,7 @@
   #menuToggle {
     display: none;
   }
+
   #navbarContainer {
     justify-content: center;
   }
@@ -124,4 +126,21 @@
   .searchInput {
     width: auto;
   }
+}
+
+.shoppingCartNumberContainer {
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--primary-button);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--roboto);
+  font-size: 11px;
+  color: var(--white-font-color);
+  position: relative;
+  bottom: 0.75rem;
+  right: 0.6rem;
+
 }
