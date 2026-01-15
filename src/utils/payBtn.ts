@@ -1,6 +1,6 @@
 import { clearCart } from "./cartStorage";
 
-//JESPER: bör ligga i mapp - pages/
+//JESPER: bör ligga i mapp - components/
 
 export function payBtn() {
   const payBtn = document.getElementById("payBtn") as HTMLButtonElement;

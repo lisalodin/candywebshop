@@ -18,6 +18,7 @@ export const createHtmlCartItems = (shoppingCart: CartItem[]) => {
 
 
   //JESPER: här hade vi kunnat börja dela upp koden i separata filer
+  //så att det inte blir så många kodrader i varje fil
 
   //JESPER: flytta den kod som har med total att göra till funktionen renderCartQuantity nedan
   let total = 0; // Variabel för att hålla koll på totalsumman

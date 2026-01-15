@@ -1,4 +1,4 @@
-//JESPER: bör ligga i mapp - pages
+//JESPER: bör ligga i mapp - components
 
 document
     .getElementById("showMoreBtn")

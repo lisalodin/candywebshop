@@ -1,5 +1,3 @@
-//JESPER: bör ligga i mapp - pages/
-
 export function goToCartBtn() { // Hanterar klick på gå till kassan-knappen
   const goToCartBtn = document.getElementById("goToCartBtn") as HTMLButtonElement; // Hämta gå till kassan-knappen från DOM
 
