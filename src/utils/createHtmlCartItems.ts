@@ -1,7 +1,9 @@
+import { initCartSum } from "../components/initCartSum";
+import { renderCartPrice } from "../components/renderCartPrice";
+import { renderCartProducts } from "../components/renderCartProducts";
+import { renderCartQuantity } from "../components/renderCartQuantity";
+import { renderCartRemove } from "../components/renderCartRemove";
 import type { CartItem } from "../models/CartItem";
-import { getCartTotalPrice, getItemTotalPrice, getCartTotalQuantity } from "./cartCalculations";
-import { increaseQuantity, decreaseQuantity, removeItem } from "./cartActions";
-import { updateCartBadge } from "./cartIconQuantity"; //Wilma:jag la till denna  funktion som jag anropar i olika utils när förändringar på antal sker (så det uppdateras bredvid cart ikonen)
 
 //JESPER: filen bör ligga i mapp - pages/
 
@@ -11,174 +13,38 @@ export const createHtmlCartItems = (shoppingCart: CartItem[]) => {
   const cartItemsContainer = document.getElementById(
     "cartItems"
   ) as HTMLDivElement;
-  //JESPER: flytta den här variabeln till funktionen initCartSum som anropas längst ner i den här filen
-  const cartSum = document.getElementById("cartSum") as HTMLSpanElement; // Total summa i varukorgen
 
   if (!cartItemsContainer) return; // Om containern inte finns, avsluta funktionen
   //Tömmer containern innan vi börjar
   cartItemsContainer.innerHTML = ""; // Rensar innehållet i cartItemsContainer
 
-  const total = getCartTotalPrice(shoppingCart);
-  const totalQuantity = getCartTotalQuantity(shoppingCart);
-
-
-  //JESPER: här hade vi kunnat börja dela upp koden i separata filer
-  //så att det inte blir så många kodrader i varje fil
-
-  //JESPER: NY FIL med funktionen renderCartItems som anropas här
   //loopa varukorgen
   shoppingCart.forEach((item, index) => {
-    //Skapar ett cart item
-    const cartItem = document.createElement("div");
+    const cartItem = document.createElement("div"); //Skapar ett cart item
     cartItem.className = "cartItem";
 
-    //JESPER: NY FIL för funktionen renderCartProducts som anropas inuti renderCartItems - med parameter cartProduct
-    //Hela produkten
-    const cartProduct = document.createElement("div");
-    cartProduct.className = "cartProduct";
-    //Produktbilden
-    const img = document.createElement("img");
-    img.className = "cartImg";
-    img.src = item.product.image;
-    img.alt = item.product.name;
-    //Skapar en div där info om produkten ska vara
-    const cartInfo = document.createElement("div");
-    cartInfo.className = "cartInfo";
-    //Produktsnamn P
-    const productName = document.createElement("p");
-    productName.className = "productName";
-    productName.textContent = item.product.name;
-    //Produktsinfo P
-    const productInfo = document.createElement("p");
-    productInfo.className = "productInfo";
-    productInfo.textContent = item.product.info;
-
-    cartInfo.appendChild(productName);
-    cartInfo.appendChild(productInfo);
-    cartProduct.appendChild(img);
-    cartProduct.appendChild(cartInfo);
-
-    //JESPER: NY FIL med funktion renderCartQuantity som anropas inuti renderCartItems - med parameter cartQty
-    //Antal div
-    const cartQty = document.createElement("div");
-    cartQty.className = "cartQty";
-    //Antal produkter
-    const qtyText = document.createElement("span");
-    qtyText.className = "qty";
-    qtyText.innerText = "Antal ";
-    //Antal produkter kontroll +/-
-    const qtyControls = document.createElement("div");
-    qtyControls.className = "qtyControls";
-    // Minus knapp
-    const minusBtn = document.createElement("button");
-    minusBtn.className = "minusBtn";
-    minusBtn.textContent = "-";
-    // Antal produkter
-    const numOfProducts = document.createElement("span");
-    numOfProducts.className = "numOfProducts";
-    numOfProducts.textContent = item.quantity.toString(); //Kanske ställer till det vid räkning
-    // Plus knapp
-    const plusBtn = document.createElement("button");
-    plusBtn.className = "plusBtn";
-    plusBtn.textContent = "+";
-
-    minusBtn.addEventListener("click", () => {
-      decreaseQuantity(shoppingCart, index, createHtmlCartItems);
-    });
-
-    plusBtn.addEventListener("click", () => {
-      increaseQuantity(shoppingCart, index, createHtmlCartItems);
-    });
-
-    qtyControls.appendChild(minusBtn);
-    qtyControls.appendChild(numOfProducts);
-    qtyControls.appendChild(plusBtn);
-
-    cartQty.appendChild(qtyText);
-    cartQty.appendChild(qtyControls);
-
-    //JESPER: NY FIL för funktionen renderCartPrice som anropas inuti renderCartItems - med parameter cartItemPriceContainer
-
-    //Priset på varan i item
-    const cartItemPriceContainer = document.createElement("div");
-    cartItemPriceContainer.className = "cartItemPriceContainer";
-    // Pris rubrik
-    const priceHead = document.createElement("span");
-    priceHead.className = "priceHead";
-    priceHead.textContent = "Pris";
-    // Pris på item
-    const cartItemPrice = document.createElement("span");
-    cartItemPrice.className = "cartItemPrice";
-    cartItemPrice.textContent = getItemTotalPrice(item).toFixed(2) + " kr"; //Räknar ut priset beroende på antal
-    // Bygg ihop pris delen
-    cartItemPriceContainer.appendChild(priceHead);
-    cartItemPriceContainer.appendChild(cartItemPrice);
-
-    //JESPER: NY FIL för funktionen renderCartRemove som anropas här med parameter removeBtn
-
-    //Ta bort item
-    const removeBtn = document.createElement("button");
-    removeBtn.className = "removeBtn";
-    removeBtn.textContent = "x";
-
-    removeBtn.addEventListener("click", () => {
-      removeItem(shoppingCart, index, createHtmlCartItems);
-    });
+    const cartProduct = renderCartProducts(item);
+    const cartQuantity = renderCartQuantity(
+      shoppingCart,
+      item,
+      index,
+      createHtmlCartItems
+    );
+    const cartPrice = renderCartPrice(item);
+    const cartRemove = renderCartRemove(
+      shoppingCart,
+      index,
+      createHtmlCartItems
+    );
 
     // Bygg ihop hela kortet
     cartItem.appendChild(cartProduct);
-    cartItem.appendChild(cartQty);
-    cartItem.appendChild(cartItemPriceContainer);
-    cartItem.appendChild(removeBtn);
+    cartItem.appendChild(cartQuantity);
+    cartItem.appendChild(cartPrice);
+    cartItem.appendChild(cartRemove);
 
     cartItemsContainer.appendChild(cartItem);
   }); // Hit går shoppingCart.forEach
 
-  //JESPER: NY FIL för funktionen initCartSum som anropas här
-
-  if (cartSum) {
-    // Kollar om cartSum finns
-    cartSum.textContent = `${total.toFixed(2)}kr`; // Uppdatera totalsumman med två decimale
-  }
-
-  const cartTotal = document.getElementById("cartTotal") as HTMLDivElement;
-
-  cartTotal.innerHTML = "";
-
-  //Visar inget om varukorgen är tom och summan 0kr
-  if (shoppingCart.length === 0) {
-    return;
-  }
-
-  const cartTotalWrapper = document.createElement("div");
-  cartTotalWrapper.className = "cartTotalWrapper";
-
-  const cartTotalText = document.createElement("span");
-  cartTotalText.className = "cartTotalText";
-
-  const cartTotalPrice = document.createElement("span");
-  cartTotalPrice.className = "cartTotalPrice";
-
-  cartTotalText.textContent = "Total summa: ";
-  cartTotalPrice.textContent = `${total.toFixed(2)} kr`;
-
-  cartTotalWrapper.appendChild(cartTotalText);
-  cartTotalWrapper.appendChild(cartTotalPrice);
-
-  cartTotal.appendChild(cartTotalWrapper);
-
-  const cartIcon = document.querySelector(".cartIcon") as HTMLElement;
-
-  if (cartIcon) {
-    cartIcon
-      .querySelector(".shoppingCartNumberContainer")
-      ?.remove();
-
-    const badge = document.createElement("div");
-    badge.className = "shoppingCartNumberContainer";
-    badge.textContent = totalQuantity.toString();
-
-    cartIcon.appendChild(badge);
-  }
-  updateCartBadge(shoppingCart);//wilma: detta anropar funktion som gör att när man tar bort, ökar eller minskar så ändras siffran bredvid shoppingcarticon till rätt antal produkter
+  initCartSum(shoppingCart);
 };
