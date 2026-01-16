@@ -1,44 +1,94 @@
 @use "/src/styles/mixins" as *;
 @use "/src/styles/variables" as *;
 
-h4 {
-    font-size: 12px;
-    text-decoration: underline;
+#footer {
+    h4 {
+        font-family: var(--pacifico);
+        font-size: 16px;
+        text-decoration: underline var(--primary-button) 0.2rem;
+        text-underline-offset: 0.25rem;
+        letter-spacing: 1px;
 
-    @include tablet {
-        font-size: 14px;
+        @include desktop {
+            font-size: 20px;
+            text-decoration: underline var(--primary-button) 0.25rem;
+            text-underline-offset: 0.3rem;
+        }
     }
-}
 
-footer {
-    font-family: 'Roboto', sans-serif;
-    height: 6rem;
-    background-color: var(--grey-base);
-    color: var(--white-font-color);
-    bottom: 0;
-
-    @include tablet {
-        height: 6.5rem;
+    footer {
+        font-family: 'Roboto', sans-serif;
+        height: fit-content;
+        background-color: var(--primary-font-color);
+        color: var(--white-font-color);
     }
-}
 
-.footercolumns {
-    display: flex;
-    font-size: 10px;
-    line-height: 0.3rem;
-    justify-content: space-evenly;
-
-    @include tablet {
-        font-size: 12px;
+    .footercontainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-}
 
-.copyright {
-    text-align: center;
-    margin: 0.5rem;
-    font-size: 9px;
+    .footercolumns {
+        display: flex;
+        width: 260px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 1rem;
+        height: fit-content;
+        font-size: 10px;
+        gap: 1rem;
 
-    @include tablet {
-        font-size: 12px;
+
+        @include tablet {
+            font-size: 12px;
+            width: 100vw;
+        }
+
+        @include desktop {
+            font-size: 16px;
+            width: 1100px;
+        }
+    }
+
+    .footercolumn {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        line-height: 0.3rem;
+    }
+
+    div.footerLogo {
+        background-color: var(--primary-base);
+        border-radius: 50%;
+        width: 96.94px;
+        height: 96.94px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: inset 0px 0px 3px 3px #b19664;
+    }
+
+    img.footerLogo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .copyright {
+        text-align: center;
+        margin: 1rem;
+        font-size: 9px;
+
+        @include tablet {
+            font-size: 11px;
+            margin: 2rem;
+        }
+
+        @include desktop {
+            font-size: 12px;
+        }
     }
 }

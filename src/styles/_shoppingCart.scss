@@ -3,11 +3,15 @@
 
 #colorScheme {
   background-color: var(--primary-base);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .shoppingCart {
   background-color: var(--primary-base);
   min-height: 100vh;
+  flex: 1;
 }
 
 #cartContainer {
@@ -177,7 +181,7 @@
   }
 }
 
-.emptyCart {  
+.emptyCart {
   background-color: var(--white-font-color);
   border-radius: 12px;
   padding: 60px;
@@ -209,6 +213,7 @@
   #colorScheme {
     background-color: var(--secondary-base);
   }
+
   .shoppingCart {
     background-color: var(--primary-base);
     max-width: 1200px;

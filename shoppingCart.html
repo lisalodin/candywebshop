@@ -1,98 +1,91 @@
 <!DOCTYPE html>
 <html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <title>Godisråttan</title>
-  </head>
 
-  <body>
-    <div id="colorScheme">
-      <section id="header">
-        <div class="header-banner">
-          <p>Fri frakt vid köp över 200kr. Annars 49kr för hemleverans.</p>
-        </div>
-        <div class="header-logo">
-          <img
-            src="/src/assets/logo/godisrattan_logotyp.png"
-            alt="Godisråttan"
-          />
-        </div>
-      </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <title>Godisråttan</title>
+</head>
 
-      <nav id="navbar">
-        <div id="navbarContainer">
-          <button id="menuToggle" aria-label="Öppna meny">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </button>
-          <ul id="navLinks">
-            <li><a class="navLink" href="index.html">Hem</a></li>
-            <li><a class="navLink" href="#footer">Kontakt</a></li>
-            <li><a class="navLink" href="/product.html">Lösgodis</a></li>
-            <li>
-              <input
-                class="searchInput"
-                type="text"
-                placeholder="Sök produkt..."
-              />
-            </li>
-            <li>
-              <a
-                class="cartIcon"
-                href="/shoppingCart.html"
-                aria-label="varukorg"
-                ><img
-                  src="/src/assets/ikoner/shopping_cart.svg"
-                  width="30px"
-                  alt="Varukorg"
-              /></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+<body>
+  <div id="colorScheme">
+    <section id="header">
+      <div class="header-banner">
+        <p>Fri frakt vid köp över 200kr. Annars 49kr för hemleverans.</p>
+      </div>
+      <div class="header-logo">
+        <img src="/src/assets/logo/godisrattan_logotyp.png" alt="Godisråttan" />
+      </div>
+    </section>
 
-      <section class="shoppingCart">
-        <div id="cartContainer">
-          <h2>Varukorg</h2>
+    <nav id="navbar">
+      <div id="navbarContainer">
+        <button id="menuToggle" aria-label="Öppna meny">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul id="navLinks">
+          <li><a class="navLink" href="index.html">Hem</a></li>
+          <li><a class="navLink" href="#footer">Kontakt</a></li>
+          <li><a class="navLink" href="/product.html">Lösgodis</a></li>
+          <li>
+            <input class="searchInput" type="text" placeholder="Sök produkt..." />
+          </li>
+          <li>
+            <a class="cartIcon" href="/shoppingCart.html" aria-label="varukorg"><img
+                src="/src/assets/ikoner/shopping_cart.svg" width="30px" alt="Varukorg" /></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-          <div id="cartItems"></div>
-          <div id="cartTotal"></div>
-            <button id="goToCheckoutBtn">Gå till kassan</button>
-        </div>
-      </section>
+    <section class="shoppingCart">
+      <div id="cartContainer">
+        <h2>Varukorg</h2>
 
-      <section id="footer">
-        <footer>
-          <div class="footercontainer">
-            <div class="footercolumns">
-              <div class="footercolumn">
-                <h4>Kontakta oss</h4>
-                <p>info@godisbutiken.se</p>
-                <p>012-345 67 89</p>
-              </div>
-              <div class="footercolumn">
-                <h4>Hitta hit</h4>
-                <p>Godisvägen 88</p>
-                <p>Stockholm 161 22</p>
-              </div>
-              <div class="footercolumn">
-                <h4>Öppettider</h4>
-                <p>Mån-fre 11-18</p>
-                <p>Lör-sön 11-15</p>
-              </div>
+        <div id="cartItems"></div>
+        <div id="cartTotal"></div>
+        <button id="goToCheckoutBtn">Gå till kassan</button>
+      </div>
+    </section>
+
+    <section id="footer">
+      <footer>
+        <div class="footercontainer">
+          <div class="footercolumns">
+            <div class="footercolumn">
+              <h4>Kontakta oss</h4>
+              <p>info@godisbutiken.se</p>
+              <p>012-345 67 89</p>
             </div>
-            <div class="copyright">
-              &copy; 2024 Godisbutiken. Innehållet på denna webbplats är
-              upphovsrättsskyddat och tillhör Godisbutiken AB.
+            <div class="footercolumn">
+              <h4>Hitta hit</h4>
+              <p>Godisvägen 88</p>
+              <p>Stockholm 161 22</p>
+            </div>
+            <div class="footercolumn">
+              <h4>Öppettider</h4>
+              <p>Mån-fre 11-18</p>
+              <p>Lör-sön 11-15</p>
+            </div>
+            <div class="footercolumn">
+              <div class="footerLogo">
+                <img class="footerLogo" src="/src/assets/logo/godisrattan_logo.png" />
+              </div>
             </div>
           </div>
-        </footer>
-      </section>
+          <div class="copyright">
+            &copy; 2024 Godisbutiken. Innehållet på denna webbplats är
+            upphovsrättsskyddat och tillhör Godisbutiken AB.
+          </div>
+        </div>
+      </footer>
+    </section>
 
-      <script type="module" src="/src/main.ts"></script>
-    </div>
-  </body>
+    <script type="module" src="/src/main.ts"></script>
+  </div>
+</body>
+
 </html>

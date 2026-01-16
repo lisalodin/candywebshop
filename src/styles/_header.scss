@@ -2,7 +2,7 @@
 @use "mixins" as *;
 
 .header-banner {
-  background-color: var(--grey-base);
+  background-color: var(--primary-font-color);
   font-family: var(--roboto);
   color: var(--white-font-color);
   text-align: center;
@@ -20,7 +20,7 @@
   @include tablet {
     padding: 20px;
   }
-  
+
   img {
     width: 100px;
   }
