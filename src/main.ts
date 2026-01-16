@@ -34,6 +34,7 @@ goToCheckoutBtn();
 
 // Popup vid klick på betalaknappen i kassan
 payBtn();
+//JESPER: flytta längst ner
 
 //detta gör HTML för produkter synligt på produktsidan.
 const productPageContainer = document.getElementById("productPageContainer");
