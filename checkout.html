@@ -133,17 +133,16 @@
   </section>
 
   <!-- Orderbekräftelse popup -->
-   <div id="popup" class="popup hidden">
+  <div id="popup" class="popup hidden" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
   <div class="popup-content">
-    <h2>Tack för ditt köp! 🍬</h2>
-    <p>
-      Din order har mottagits och behandlas.<br>
-      En orderbekräftelse har skickats till din e-post.
-    </p>
-    <button id="closePopup">Stäng</button>
+    <h2 id="popupTitle">Tack för ditt köp! 🍬</h2>
+      <p>
+        Din order har mottagits och behandlas.<br>
+        En orderbekräftelse har skickats till din e-post.
+      </p>
+      <button id="closePopup">Stäng</button>
+    </div>
   </div>
-</div>
-
   <script type="module" src="/src/main.ts"></script>
 </body>
 

@@ -5,23 +5,44 @@ import { updateCartBadge } from "./cartIconQuantity"; //Wilma:jag la till denna 
 
 //JESPER: filen bör ligga i mapp - pages/
 
-//funktion - skapa html för varukorgen
-export const createHtmlCartItems = (shoppingCart: CartItem[]) => {
-  // Tar in varukorgen som parameter
-  const cartItemsContainer = document.getElementById(
-    "cartItems"
-  ) as HTMLDivElement;
+export const createHtmlCartItems = (shoppingCart: CartItem[]) => { // Funktion för att skapa HTML-element för varukorgsartiklar
+  const cartItemsContainer = document.getElementById("cartItems") as HTMLDivElement; // Container för varukorgsartiklar
   //JESPER: flytta den här variabeln till funktionen initCartSum som anropas längst ner i den här filen
   const cartSum = document.getElementById("cartSum") as HTMLSpanElement; // Total summa i varukorgen
+  const goToCheckoutBtn = document.getElementById("goToCheckoutBtn") as HTMLButtonElement;
 
   if (!cartItemsContainer) return; // Om containern inte finns, avsluta funktionen
-  //Tömmer containern innan vi börjar
+  
   cartItemsContainer.innerHTML = ""; // Rensar innehållet i cartItemsContainer
 
-  const total = getCartTotalPrice(shoppingCart);
   const totalQuantity = getCartTotalQuantity(shoppingCart);
 
+  // Om varukorgen är tom -  vit container och visa meddelande
+  if (shoppingCart.length === 0) { // Kollar om varukorgen är tom
+    const emptyMessage = document.createElement("div"); // Skapar ett div-element för tomt meddelande
+    emptyMessage.className = "emptyCart";
+    emptyMessage.innerHTML = `
+      <p>Tyvärr är varukorgen tom just nu, men det är lätt att ändra på!</p>
+      <a href="/product.html" class="shopLink">Shoppa loss här</a>
+    `;
+    cartItemsContainer.appendChild(emptyMessage);
+    
+    if (cartSum) { 
+      cartSum.textContent = "0 kr"; // Sätter totalsumman till 0 kr
+    }
 
+    if (goToCheckoutBtn) { 
+      goToCheckoutBtn.style.display = "none"; // Göm köpknappen om varukorgen är tom
+    }
+    return; // Avsluta funktionen här
+  }
+    if (goToCheckoutBtn) { 
+      goToCheckoutBtn.style.display = ""; // Visa köpknappen om varukorgen inte är tom
+    }
+
+  const total = getCartTotalPrice(shoppingCart); // Beräknar den totala summan av varukorgen
+
+  
   //JESPER: här hade vi kunnat börja dela upp koden i separata filer
   //så att det inte blir så många kodrader i varje fil
 

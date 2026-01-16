@@ -89,7 +89,7 @@
   margin: 0 auto;
   display: block; 
   padding: 16px;
-  background-color: var(--primary-button);
+  background-color: var(--secondary-button);
   color: var(--white-font-color);
   border: none;
   border-radius: 25px;
@@ -144,7 +144,12 @@
     border: none;
     cursor: pointer;
     font-size: 16px;
-    background-color: var(--primary-button);
+    background-color: var(--alternative-button);
     color: var(--white-font-color);
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.9;
+    }
   }
 }

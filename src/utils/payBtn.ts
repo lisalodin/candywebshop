@@ -13,13 +13,12 @@ export function payBtn() {
     popup.classList.remove("hidden");
   });
 
-  if (closeBtn && popup) { // Kontrollera att elementen finns
-  closeBtn.addEventListener("click", () => { // Lägg till klickhändelse på stängknappen
-    popup.classList.add("hidden"); // Gömmer popupen
-    clearCart();                   // Tömmer varukorgen
-    window.location.href = "/index.html"; // Går direkt till landingsite
+  // Stänger popup & tömmer kundvagnen vid klick på stäng-knappen, användaren kommer till startsidan
+  closeBtn.addEventListener("click", () => {
+    popup.classList.add("hidden");
+    clearCart();
+    window.location.href = "/index.html";
   });
-}
 
   // Stäng popup när man klickar utanför rutan
   popup.addEventListener("click", (e) => {
