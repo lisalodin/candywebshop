@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
   <head>
     <meta charset="UTF-8" />
@@ -52,10 +52,12 @@
     </section>
 
     <dialog id="productModal">
-      <div class="btnContainer">
-        <button id="closeModal">x</button>
+      <div id="modalContainer">
+        <div class="btnContainer">
+          <button id="closeModal">x</button>
+        </div>
+        <div id="extDetailsContainer"></div>
       </div>
-      <div id="extDetailsContainer"></div>
     </dialog>
 
     <section id="footer">
@@ -78,21 +80,21 @@
               <p>Lör-sön 11-15</p>
             </div>
           </div>
+          <div class="footercolumn">
+            <div class="footerLogo">
+              <img
+                class="footerLogo"
+                src="/src/assets/logo/godisrattan_logo.png"
+              />
+            </div>
+          </div>
           <div class="copyright">
             &copy; 2024 Godisbutiken. Innehållet på denna webbplats är
             upphovsrättsskyddat och tillhör Godisbutiken AB.
           </div>
-          <div class="footercolumn">
-            <div class="footerLogo">
-              <img class="footerLogo" src="/src/assets/logo/godisrattan_logo.png" />
-            </div>
-          </div>
-          <div class="copyright">
-            &copy; 2024 Godisbutiken. Innehållet på denna webbplats är upphovsrättsskyddat och tillhör Godisbutiken AB.
-          </div>
         </div>
-    </footer>
-  </section>
+      </footer>
+    </section>
 
     <script type="module" src="/src/main.ts"></script>
   </body>

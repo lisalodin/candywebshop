@@ -4,20 +4,22 @@ export class Product {
   name: string;
   info: string;
   price: number;
-  category: string
-
+  category: string;
+  details: string;
 
   constructor(
     image: string,
     name: string,
     info: string,
     price: number,
-    category: string
+    category: string,
+    details: string
   ) {
     this.image = image;
     this.name = name;
     this.info = info;
     this.price = price;
     this.category = category;
+    this.details = details;
   }
 }
