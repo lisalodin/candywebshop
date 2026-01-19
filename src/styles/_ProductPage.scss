@@ -201,7 +201,6 @@ nav {
     margin-top: 1rem;
 }
 
-
 .productCard {
     background-color: var(--white-font-color);
     width: 180px;
@@ -312,4 +311,8 @@ button {
     justify-content: center;
     align-items: center;
     max-width: 1000px;
+}
+
+.hidden {
+    display: none;
 }

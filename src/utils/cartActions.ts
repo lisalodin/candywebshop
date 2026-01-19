@@ -26,6 +26,7 @@ export const decreaseQuantity = (
   }
   saveCart(cart);
   render(cart);
+  updateCartBadge(cart);
 };
 
 // funktion för att ta bort produkt

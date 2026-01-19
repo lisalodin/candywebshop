@@ -4,6 +4,7 @@ import { Product } from "../models/Product";
 export const createProductCard = (product: Product): HTMLDivElement => {
     const card: HTMLDivElement = document.createElement("div");
     card.className = "productCard";
+    card.setAttribute("data-category", product.category);
 
     card.innerHTML = `
         <div class="productCardImageContainer">
@@ -63,8 +64,9 @@ export const createHtmlProductPage = (
     if (showMoreBtnContainer !== null) {
         productGrid.appendChild(showMoreBtnContainer)
     };
-    // sista 4 produktkorten
+    // sista produkterna i grid2
     products.slice(4, 15).forEach(product => {
+        const card = createProductCard(product);
         productGrid2.appendChild(createProductCard(product));
     });
 

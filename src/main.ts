@@ -13,6 +13,8 @@ import { loadCart } from "./services/cartStorage";
 import { createHtmlCartItems } from "./pages/createHtmlCartItems";
 import { payBtn } from "./components/payBtn";
 import { updateCartBadge } from "./utils/cartIconQuantity";
+import { setupCategoryFilters } from "./utils/filterProducts";
+
 
 mobileMenu();
 
@@ -52,3 +54,5 @@ goToCheckoutBtn();
 
 // Popup vid klick på betalaknappen i kassan
 payBtn();
+
+setupCategoryFilters(products);
