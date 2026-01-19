@@ -45,35 +45,35 @@
     <div class="checkout-container">
       <h1>Kassa</h1>
       <div class="checkout-section">
-        <h2>Leveransuppgifter</h2>
+        <h2>Leveransuppgifter*</h2>
         <div class="form-group">
-          <label for="firstname">Förnamn</label>
-          <input type="text" id="firstname" placeholder="Förnamn">
+          <label for="firstname">Förnamn*</label>
+          <input type="text" id="firstname" placeholder="Förnamn" required>
         </div>
         <div class="form-group">
-          <label for="lastname">Efternamn</label>
-          <input type="text" id="lastname" placeholder="Efternamn">
+          <label for="lastname">Efternamn*</label>
+          <input type="text" id="lastname" placeholder="Efternamn" required>
         </div>
         <div class="form-group">
-          <label for="address">Adress</label>
-          <input type="text" id="address" placeholder="Adress">
+          <label for="address">Adress*</label>
+          <input type="text" id="address" placeholder="Adress" required>
         </div>
         <div class="form-group">
-          <label for="email">E-post</label>
-          <input type="email" id="email" placeholder="E-post">
+          <label for="email">E-post*</label>
+          <input type="email" id="email" placeholder="E-post" required>
         </div>
         <div class="form-group">
-          <label for="phone">Telefon</label>
-          <input type="tel" id="phone" placeholder="Telefon">
+          <label for="phone">Telefon*</label>
+          <input type="tel" id="phone" placeholder="Telefon" required>
         </div>
       </div>
 
       <!-- Fraktmetod -->
       <div class="checkout-section">
-        <h2>Fraktmetod</h2>
+        <h2>Fraktmetod*</h2>
         <div class="radio-group">
           <label>
-            <input type="radio" name="shipping" value="budbee">
+            <input type="radio" name="shipping" value="budbee" required>
             Budbee
           </label>
           <label>
@@ -85,10 +85,10 @@
 
       <!-- Betalningsmetod -->
       <div class="checkout-section">
-        <h2>Betalningsmetod</h2>
+        <h2>Betalningsmetod*</h2>
         <div class="radio-group">
           <label>
-            <input type="radio" name="payment" value="bank">
+            <input type="radio" name="payment" value="bank" required>
             Internetbank
           </label>
           <label>
@@ -101,6 +101,17 @@
     </div>
   </section>
 
+<div id="errorPopup" class="popup hidden">
+  <div class="popup-content">
+    <h2>Hoppsan!</h2>
+    <p>
+      Försöker du smita?<br>
+      Du har inte fyllt i alla uppgifter ännu, <br>
+      vänligen testa betala igen när du gjort det.
+    </p>
+    <button id="closeErrorPopup">Okej, jag löser det!</button>
+  </div>
+</div>
 
 
 

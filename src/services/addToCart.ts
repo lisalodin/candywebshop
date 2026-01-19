@@ -3,8 +3,6 @@ import type { CartItem } from "../models/CartItem";
 import { saveCart, loadCart } from "./cartStorage";
 import { createHtmlCartItems } from "../pages/createHtmlCartItems";
 
-//JESPER: filen bör ligga i mapp - services/
-
 export const addToCart = (product: Product): CartItem[] => { // Tar emot en produkt som parameter
   const cart = loadCart(); // Ladda den nuvarande kundvagnen
   

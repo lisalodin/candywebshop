@@ -1,7 +1,5 @@
 import type { CartItem } from "../models/CartItem";
 
-//JESPER: bör ligga i mapp - services/
-
 const CART_KEY = "shoppingCart"; // Key används för att lagra kundvagnsdata i localStorage
 
 export const saveCart = (cart: CartItem[]): void => { // Sparar kundvagnsdata i localStorage

@@ -23,7 +23,11 @@
 
 import { showProductDetails } from "../components/showProductDetails";
 import { products } from "../data/products";
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> feature-required-checkout
 //funktion - skapa html för produkten på landing-page
 export const createHtmlMainProductCard = () => {
     const main = document.getElementById("main");

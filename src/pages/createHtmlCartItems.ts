@@ -6,7 +6,6 @@ import { renderCartRemove } from "../components/renderCartRemove";
 import { renderEmptyCart } from "../components/renderEmptyCart";
 import type { CartItem } from "../models/CartItem";
 
-//JESPER: filen bör ligga i mapp - pages/
 
 //funktion - skapa html för varukorgen
 export const createHtmlCartItems = (shoppingCart: CartItem[]) => {

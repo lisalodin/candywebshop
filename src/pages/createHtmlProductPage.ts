@@ -1,7 +1,5 @@
 import { Product } from "../models/Product";
 
-//JESPER: bör ligga i mapp - pages/
-
 //funktion skapar html för produktkorten
 export const createProductCard = (product: Product): HTMLDivElement => {
     const card: HTMLDivElement = document.createElement("div");
