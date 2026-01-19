@@ -83,6 +83,35 @@
   }
 }
 
+.order-summary {
+  h2 {
+    margin-bottom: 16px;
+  }
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--alternative-base);
+}
+
+.shipping-cost {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 2px solid var(--grey-base);
+  font-weight: bold;
+  font-size: 18px;
+}
+
 .pay-btn {
   width: 100%;
   max-width: 500px; 
@@ -100,7 +129,6 @@
     background-color: var(--hover-button);
   }
 }
-
 
 // Popuprutornas styling
 .popup {

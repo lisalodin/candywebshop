@@ -13,6 +13,7 @@ import { loadCart } from "./services/cartStorage";
 import { createHtmlCartItems } from "./pages/createHtmlCartItems";
 import { payBtn } from "./components/payBtn";
 import { updateCartBadge } from "./utils/cartIconQuantity";
+import { renderCheckoutPriceSummary } from "./components/renderCheckoutPriceSummary";
 
 mobileMenu();
 
@@ -49,6 +50,9 @@ if (cartItemsContainer) {
 
 //Knappen "Gå till kassan" i varukorgen. Vid klick skickas man till "Kassa" sidan.
 goToCheckoutBtn();
+
+// Visar summering på checkout-sidan
+renderCheckoutPriceSummary();
 
 // Popup vid klick på betalaknappen i kassan
 payBtn();
