@@ -13,6 +13,7 @@ import { loadCart } from "./services/cartStorage";
 import { createHtmlCartItems } from "./pages/createHtmlCartItems";
 import { payBtn } from "./components/payBtn";
 import { updateCartBadge } from "./utils/cartIconQuantity";
+import { initProductPageDetails } from "./utils/productPageDetails";
 
 mobileMenu();
 
@@ -35,6 +36,8 @@ const productPageContainer = document.getElementById("productPageContainer");
 if (productPageContainer !== null) {
   productPageContainer.appendChild(createHtmlProductPage(products));
 }
+
+initProductPageDetails();
 
 initProductPageCart(); // Initierar köpknappar på produktsidan
 

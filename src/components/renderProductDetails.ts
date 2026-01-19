@@ -1,9 +1,7 @@
-import { products } from "../data/products";
 import { Product } from "../models/Product";
-import { addToCart } from "../services/addToCart";
-import { updateCartBadge } from "../utils/cartIconQuantity";
 
-export const createHtmlProductDetails = (product: Product) => {
+export const renderProductDetails = (product: Product) => {
+  const modalContainer = document.getElementById("modalContainer");
   const productContainer = document.getElementById("extDetailsContainer");
 
   if (!productContainer) return;
@@ -26,24 +24,18 @@ export const createHtmlProductDetails = (product: Product) => {
   info.innerHTML = product.info;
   price.className = "price";
   price.innerHTML = `${product.price.toString()}0:-/hg`;
-  button.className = "button";
+  button.className = "buyBtnDetails";
   button.innerHTML = "Köp";
 
-  button.addEventListener("click", () => {
-    const updatedCart = addToCart(products[0]);
-      console.log("Varukorg:", updatedCart);
-      updateCartBadge(updatedCart);
-  })
-
   extInfo.className = "extInfo";
-  extInfo.innerHTML =
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quidem ullam impedit natus cumque reprehenderit dolore rerum dignissimos optio eveniet.";
+  extInfo.innerHTML = product.details;
 
   detailsContainer.appendChild(name);
   detailsContainer.appendChild(info);
+  detailsContainer.appendChild(extInfo);
   detailsContainer.appendChild(price);
   detailsContainer.appendChild(button);
-  detailsContainer.appendChild(extInfo);
   productContainer?.appendChild(image);
   productContainer?.appendChild(detailsContainer);
+  modalContainer?.appendChild(productContainer);
 };

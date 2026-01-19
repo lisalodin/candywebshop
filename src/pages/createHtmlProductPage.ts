@@ -15,7 +15,7 @@ export const createProductCard = (product: Product): HTMLDivElement => {
         </div>
 
         <div class="productTextContainer">
-            <h3>${product.name}</h3>
+            <h3 class="productCardName">${product.name}</h3>
             <p class="productDescription">${product.info}</p>
             <p class="priceSmall">${product.price}:-/hg</p>
             <button class="buyBtnSmall">Köp</button>
@@ -41,9 +41,10 @@ export const createHtmlProductPage = (
 
     `;
 
-    const productGrid0 = productPageContainer.querySelector(
-        "#productCardGrid0"
-    ) as HTMLDivElement;
+    //JESPER: den här variabeln används inte, ta bort?
+    // const productGrid0 = productPageContainer.querySelector(
+    //     "#productCardGrid0"
+    // ) as HTMLDivElement;
 
     const productGrid = productPageContainer.querySelector(
         "#productCardGrid"
