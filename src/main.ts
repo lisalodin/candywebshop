@@ -33,8 +33,8 @@ document.getElementById("buyBtnBig")?.addEventListener("click", () => {
 //detta gör HTML för produkter synligt på produktsidan.
 const productPageContainer = document.getElementById("productPageContainer");
 if (productPageContainer !== null) {
-  productPageContainer.appendChild(createHtmlProductPage(products))
-};
+  productPageContainer.appendChild(createHtmlProductPage(products));
+}
 
 initProductPageCart(); // Initierar köpknappar på produktsidan
 
