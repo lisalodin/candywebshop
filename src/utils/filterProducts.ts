@@ -31,6 +31,7 @@ export function setupCategoryFilters(products: Product[]) {
                 if (cardCategory === category) {
                     productGrid2.classList.add("expanded");
                     el.classList.remove("hidden");
+                    showMoreBtn.classList = ("hidden");
                 } else {
                     el.classList.add("hidden");
                 }

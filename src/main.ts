@@ -16,9 +16,15 @@ import { updateCartBadge } from "./utils/cartIconQuantity";
 import { setupCategoryFilters } from "./utils/filterProducts";
 import { initProductPageDetails } from "./utils/productPageDetails";
 import { renderCheckoutPriceSummary } from "./components/renderCheckoutPriceSummary";
+import { initSearchProduct } from "./components/initSearchProduct";
 
 // Initierar mobilmenyn
 mobileMenu();
+
+document.getElementById("searchForm")?.addEventListener("submit", (e) => {
+  e.preventDefault();
+  initSearchProduct();
+});
 
 //anrop funktion - skapa html för mainProductCard på landing-page för att kunna lägga objektet i varukorgen
 createHtmlMainProductCard();

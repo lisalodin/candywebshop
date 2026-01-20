@@ -30,7 +30,13 @@
                 <li><a class="navLink" href="#footer">Kontakt</a></li>
                 <li><a class="navLink" href="/product.html">Lösgodis</a></li>
                 <li>
-                    <input class="searchInput" type="text" placeholder="Sök produkt..." />
+                    <form id="searchForm">
+              <input
+                id="searchInput"
+                type="text"
+                placeholder="Sök produkt..."
+              />
+            </form>
                 </li>
                 <li>
                     <a class="cartIcon" href="/shoppingCart.html" aria-label="varukorg"><img
@@ -45,22 +51,22 @@
             <h1 id="productPageTitle">Lösgodis</h1>
             <div id="categoryGrid">
                 <div id="sott">
-                    <img id="categoryImg" src="/src/assets/kategoribilder/analia-baggiano-AHegElpiVj4-unsplash.jpg"
+                    <img class="categoryImg" src="/src/assets/kategoribilder/analia-baggiano-AHegElpiVj4-unsplash.jpg"
                         alt="sött">
-                    <div id="overlayTextSott">
+                    <div class="overlayText">
                         <h2>Sött</h2>
                     </div>
                 </div>
                 <div id="salt">
-                    <img id="categoryImg2" src="/src/assets/kategoribilder/jonne-FEo9a5oBnaA-unsplash.jpg" alt="salt">
-                    <div id="overlayTextSalt">
+                    <img class="categoryImg" src="/src/assets/kategoribilder/jonne-FEo9a5oBnaA-unsplash.jpg" alt="salt">
+                    <div class="overlayText">
                         <h2>Salt</h2>
                     </div>
                 </div>
                 <div id="surt">
-                    <img id="categoryImg3" src="/src/assets/kategoribilder/kelly-brito-WLo9PkfUwHA-unsplash.jpg"
+                    <img class="categoryImg" src="/src/assets/kategoribilder/kelly-brito-WLo9PkfUwHA-unsplash.jpg"
                         alt="surt">
-                    <div id="overlayTextSurt">
+                    <div class="overlayText">
                         <h2>Surt</h2>
                     </div>
                 </div>
@@ -74,12 +80,12 @@
     </div>
 
     <dialog id="productModal">
-      <div id="modalContainer">
-        <div class="btnContainer">
-          <button id="closeModal">x</button>
+        <div id="modalContainer">
+            <div class="btnContainer">
+                <button id="closeModal">x</button>
+            </div>
+            <div id="extDetailsContainer"></div>
         </div>
-        <div id="extDetailsContainer"></div>
-      </div>
     </dialog>
 
     <section id="footer">

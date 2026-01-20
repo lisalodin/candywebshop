@@ -31,7 +31,13 @@
         <li><a class="navLink" href="#footer">Kontakt</a></li>
         <li><a class="navLink" href="/product.html">Lösgodis</a></li>
         <li>
-          <input class="searchInput" type="text" placeholder="Sök produkt..." />
+          <form id="searchForm">
+              <input
+                id="searchInput"
+                type="text"
+                placeholder="Sök produkt..."
+              />
+            </form>
         </li>
         <li>
           <a class="cartIcon" href="/shoppingCart.html" aria-label="varukorg"><img
@@ -127,8 +133,14 @@
   </div>
 </div>
 
-
-
+<dialog id="productModal">
+      <div id="modalContainer">
+        <div class="btnContainer">
+          <button id="closeModal">x</button>
+        </div>
+        <div id="extDetailsContainer"></div>
+      </div>
+    </dialog>
 
   <section id="footer">
     <footer>
