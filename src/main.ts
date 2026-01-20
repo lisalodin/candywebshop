@@ -66,4 +66,4 @@ renderCheckoutPriceSummary();
 // Popup vid klick på betalaknappen i kassan
 payBtn();
 
-setupCategoryFilters(products);
+setupCategoryFilters();

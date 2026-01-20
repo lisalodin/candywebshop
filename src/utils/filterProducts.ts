@@ -5,7 +5,7 @@ export function filterProductsByCategory(products: Product[], category: string):
     return products.filter(product => product.category === category);
 }
 
-export function setupCategoryFilters(products: Product[]) {
+export function setupCategoryFilters() {
     const sweetBtn = document.getElementById("sott");
     const sourBtn = document.getElementById("surt");
     const saltBtn = document.getElementById("salt");
@@ -28,6 +28,7 @@ export function setupCategoryFilters(products: Product[]) {
                 if (cardCategory === category) {
                     productGrid2.classList.add("expanded");
                     el.classList.remove("hidden");
+                    showMoreBtn.classList = ("hidden");
                 } else {
                     el.classList.add("hidden");
                 }
