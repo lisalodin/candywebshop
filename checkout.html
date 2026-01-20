@@ -68,38 +68,51 @@
         </div>
       </div>
 
-      <!-- Fraktmetod -->
-      <div class="checkout-section">
-        <h2>Fraktmetod*</h2>
-        <div class="radio-group">
-          <label>
-            <input type="radio" name="shipping" value="budbee" required>
-            Budbee
-          </label>
-          <label>
-            <input type="radio" name="shipping" value="postbox">
-            Postlåda
-          </label>
-        </div>
+    <div class="checkout-section">
+      <h2>Fraktmetod*</h2>
+      <div class="radio-group">
+        <label>
+        <input type="radio" name="shipping" value="budbee" required>
+          Budbee 39 kr
+        </label>
+        <label>
+        <input type="radio" name="shipping" value="postbox">
+          Postlåda 39 kr
+        </label>
       </div>
+    </div>
 
-      <!-- Betalningsmetod -->
-      <div class="checkout-section">
-        <h2>Betalningsmetod*</h2>
-        <div class="radio-group">
-          <label>
-            <input type="radio" name="payment" value="bank" required>
-            Internetbank
-          </label>
-          <label>
-            <input type="radio" name="payment" value="klarna">
-            Klarna
-          </label>
-        </div>
+    <div class="checkout-section">
+      <h2>Betalningsmetod*</h2>
+      <div class="radio-group">
+        <label>
+        <input type="radio" name="payment" value="bank" required>
+          Internetbank
+        </label>
+        <label>
+        <input type="radio" name="payment" value="klarna">
+          Klarna
+        </label>
       </div>
-      <button class="pay-btn" id="payBtn">Betala</button>
+    </div>
+
+    <div class="checkout-section order-summary">
+      <h2>Bekräftelse på din beställning:</h2>
+      <div id="checkoutItems"></div> 
+      <div class="shipping-cost">
+        <span> Fraktkostnad:</span>
+        <span>39 kr</span>
+      </div>
+      <div class="summary-total">
+        <span>Totalt att betala:</span>
+        <span id="checkoutTotal">0 kr</span>
+      </div>
+    </div>
+
+    <button class="pay-btn" id="payBtn">Betala</button>
     </div>
   </section>
+  
 
 <div id="errorPopup" class="popup hidden">
   <div class="popup-content">

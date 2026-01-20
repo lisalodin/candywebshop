@@ -13,8 +13,12 @@ import { loadCart } from "./services/cartStorage";
 import { createHtmlCartItems } from "./pages/createHtmlCartItems";
 import { payBtn } from "./components/payBtn";
 import { updateCartBadge } from "./utils/cartIconQuantity";
+<<<<<<< HEAD
 import { setupCategoryFilters } from "./utils/filterProducts";
 import { initProductPageDetails } from "./utils/productPageDetails";
+=======
+import { renderCheckoutPriceSummary } from "./components/renderCheckoutPriceSummary";
+>>>>>>> feature-totalprice-checkout
 
 mobileMenu();
 
@@ -53,6 +57,9 @@ if (cartItemsContainer) {
 
 //Knappen "Gå till kassan" i varukorgen. Vid klick skickas man till "Kassa" sidan.
 goToCheckoutBtn();
+
+// Visar summering på checkout-sidan
+renderCheckoutPriceSummary();
 
 // Popup vid klick på betalaknappen i kassan
 payBtn();

@@ -29,7 +29,7 @@ export const products: Product[] = [
     ),
     new Product(
         "/src/assets/produktbilder/fizzy.jpg",
-        "FizzyBombz",
+        "Fizzy Bombz",
         "Med sprudlande smak!",
         8.9,
         "surt",
@@ -37,7 +37,7 @@ export const products: Product[] = [
     ),
     new Product(
         "/src/assets/produktbilder/suraremmar.jpg",
-        "SourSwirls",
+        "Sour Swirls",
         "Svindlande goda!",
         8.9,
         "surt",
@@ -53,7 +53,7 @@ export const products: Product[] = [
     ),
     new Product(
         "/src/assets/produktbilder/hjartan.jpg",
-        "Lovehearts",
+        "Kärlekshjärtan",
         "Sprider kärlek",
         8.9,
         "sött",
@@ -61,7 +61,7 @@ export const products: Product[] = [
     ),
     new Product(
         "/src/assets/produktbilder/bonor.jpg",
-        "Dreambeans",
+        "Dream Beans",
         "Runda, söta & fina",
         8.9,
         "sött",
@@ -86,7 +86,7 @@ export const products: Product[] = [
     ,
     new Product(
         "/src/assets/produktbilder/hallonlakrits2.jpg",
-        "Salta Hallon",
+        "Rasporish Rolls",
         "Lagom salt & sött",
         8.9,
         "salt",
@@ -95,7 +95,7 @@ export const products: Product[] = [
     ,
     new Product(
         "/src/assets/produktbilder/saltaskallar2.jpg",
-        "SaltSkulls",
+        "Salty Skulls",
         "Saltiga favoriter",
         8.9,
         "salt",
