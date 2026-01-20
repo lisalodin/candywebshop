@@ -5,7 +5,7 @@ export function filterProductsByCategory(products: Product[], category: string):
     return products.filter(product => product.category === category);
 }
 
-export function setupCategoryFilters(products: Product[]) {
+export function setupCategoryFilters() {
     const sweetBtn = document.getElementById("sott");
     const sourBtn = document.getElementById("surt");
     const saltBtn = document.getElementById("salt");
