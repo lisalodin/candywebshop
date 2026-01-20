@@ -15,8 +15,14 @@ import { payBtn } from "./components/payBtn";
 import { updateCartBadge } from "./utils/cartIconQuantity";
 import { setupCategoryFilters } from "./utils/filterProducts";
 import { initProductPageDetails } from "./utils/productPageDetails";
+import { initSearchProduct } from "./components/initSearchProduct";
 
 mobileMenu();
+
+document.getElementById("searchForm")?.addEventListener("submit", (e) => {
+  e.preventDefault();
+  initSearchProduct();
+});
 
 //anrop funktion - skapa html för mainProductCard på landing-page för att kunna lägga objektet i varukorgen
 createHtmlMainProductCard();
