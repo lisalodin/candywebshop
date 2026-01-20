@@ -6,6 +6,7 @@ import { loadCart } from "../services/cartStorage";
 export const renderCheckoutPriceSummary = () => {
   const checkoutItemsContainer = document.getElementById("checkoutItems"); // Container från checkout.html
   const checkoutTotal = document.getElementById("checkoutTotal"); // Element för totalpris från checkout.html
+  const checkoutShipping = document.getElementById("checkoutShipping"); // Element för fraktkostnad från checkout.html
 
   if (!checkoutItemsContainer || !checkoutTotal) return; // Säkerställer att elementen finns
 
@@ -30,8 +31,16 @@ export const renderCheckoutPriceSummary = () => {
     checkoutItemsContainer.appendChild(summaryItem);
   });
 
-  // Visar totalsumma
-  const shipping_fee = 39;
-  const total = getCartTotalPrice(cart) + shipping_fee; // Beräknar totalpris från varukorgen plus frakt
-  checkoutTotal.textContent = `${total.toFixed(2)} kr`; // Uppdaterar totalpris i diven i checkout.html
+  // Beräkna frakt och total
+  const cartTotal = getCartTotalPrice(cart);
+  const shipping_fee = cartTotal >= 200 ? 0 : 39;
+  const total = cartTotal + shipping_fee;
+
+  // Uppdatera frakt
+  if (checkoutShipping) {
+    checkoutShipping.textContent = shipping_fee === 0 ? "0 kr" : `${shipping_fee} kr`;
+  }
+
+  // Uppdatera totalsumma
+  checkoutTotal.textContent = `${total.toFixed(2)} kr`;
 };
