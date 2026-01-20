@@ -1,10 +1,11 @@
 import { Product } from "../models/Product";
 
-
+// Funktion för att filtrera produkter baserat på kategori
 export function filterProductsByCategory(products: Product[], category: string): Product[] {
     return products.filter(product => product.category === category);
 }
 
+// Funktion för att hantera knappklick och filtrera produktkort i DOM
 export function setupCategoryFilters(products: Product[]) {
     const sweetBtn = document.getElementById("sott");
     const sourBtn = document.getElementById("surt");
@@ -15,11 +16,13 @@ export function setupCategoryFilters(products: Product[]) {
     const showMoreBtnContainer = document.getElementById("showMoreBtnContainer");
     const showMoreBtn = document.getElementById("showMoreBtn");
 
-    if (!productGrid1 || !productGrid2 || !showMoreBtn) return;
+    if (!productGrid1 || !productGrid2 || !showMoreBtn) return; 
 
+    // Återställ visningen av produktkort
     productGrid2.classList.remove("expanded");;
     showMoreBtn.textContent = "Visa Mer";
 
+    // Funktion för att filtrera och visa produkter baserat på vald kategori
     const filterProducts = (category: string) => {
         [productGrid1, productGrid2].forEach(grid => {
             Array.from(grid.children).forEach(card => {

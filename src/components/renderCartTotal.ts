@@ -1,3 +1,4 @@
+// Funktion som skapar och returnerar ett DOM-element som visar den totala summan i kundvagnen
 export const renderCartTotal = (total: number) => {
 
   const cartTotalWrapper = document.createElement("div");

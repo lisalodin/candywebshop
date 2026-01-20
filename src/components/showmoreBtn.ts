@@ -2,6 +2,7 @@ document
     .getElementById("showMoreBtn")
     ?.addEventListener("click", showMoreHandleClick);
 
+    // Visa mer / Visa mindre knapp funktionalitet
 export function showMoreHandleClick() {
     const showMoreBtnContainer = document.getElementById("showMoreBtnContainer");
     const showMoreBtn = document.getElementById("showMoreBtn");

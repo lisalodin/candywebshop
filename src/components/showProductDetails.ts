@@ -2,6 +2,7 @@ import { Product } from "../models/Product";
 import { initProductDetailsCart } from "../utils/productDetailsCart";
 import { renderProductDetails } from "./renderProductDetails";
 
+// Funktion som visar produktdetaljer i en modal
 export const showProductDetails = (product: Product) => {
   const productModal = document.getElementById("productModal");
   if (!productModal) return;

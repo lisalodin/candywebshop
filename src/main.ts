@@ -17,11 +17,13 @@ import { setupCategoryFilters } from "./utils/filterProducts";
 import { initProductPageDetails } from "./utils/productPageDetails";
 import { renderCheckoutPriceSummary } from "./components/renderCheckoutPriceSummary";
 
+// Initierar mobilmenyn
 mobileMenu();
 
 //anrop funktion - skapa html för mainProductCard på landing-page för att kunna lägga objektet i varukorgen
 createHtmlMainProductCard();
 
+// Uppdaterar varukorgsikonen med antal objekt vid sidladdning
 const cart = loadCart();
 updateCartBadge(cart);
 
@@ -39,10 +41,13 @@ if (productPageContainer !== null) {
   productPageContainer.appendChild(createHtmlProductPage(products));
 }
 
+// Initierar produktdetaljer på produktsidan
 initProductPageDetails();
 
-initProductPageCart(); // Initierar köpknappar på produktsidan
+ // Initierar köpknappar på produktsidan
+initProductPageCart(); 
 
+// Visa fler-knapp på landningssidan
 showMoreHandleClick();
 
 // Ladda varukorgen om vi är på shoppingCart-sidan
@@ -66,4 +71,5 @@ renderCheckoutPriceSummary();
 // Popup vid klick på betalaknappen i kassan
 payBtn();
 
+// Filtrering av produkter efter kategori på landningssidan
 setupCategoryFilters(products);

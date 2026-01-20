@@ -1,5 +1,6 @@
 import type { CartItem } from "../models/CartItem";
 
+// Funktion som renderar meddelande när varukorgen är tom
 export const renderEmptyCart = (shoppingCart: CartItem[]) => {
     const cartItemsContainer = document.getElementById(
     "cartItems"

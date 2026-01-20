@@ -1,9 +1,11 @@
 import { Product } from "../models/Product";
 
+// Funktion som renderar produktdetaljer i en modal
 export const renderProductDetails = (product: Product) => {
   const modalContainer = document.getElementById("modalContainer");
   const productContainer = document.getElementById("extDetailsContainer");
 
+  // Om någon av containrarna saknas, avsluta funktionen
   if (!productContainer) return;
   productContainer.innerHTML = "";
 
@@ -15,6 +17,7 @@ export const renderProductDetails = (product: Product) => {
   const button = document.createElement("button");
   const extInfo = document.createElement("p");
 
+  // Sätt klasser och innehåll för de skapade elementen
   detailsContainer.className = "detailsContainer";
   image.className = "imgContainer";
   image.style.backgroundImage = `url(${product.image})`;

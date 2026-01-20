@@ -6,6 +6,7 @@ export const createProductCard = (product: Product): HTMLDivElement => {
     card.className = "productCard";
     card.setAttribute("data-category", product.category);
 
+    // Fyller produktkortet med information från produkten
     card.innerHTML = `
         <div class="productCardImageContainer">
             <img 

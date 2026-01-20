@@ -7,9 +7,9 @@ import { renderEmptyCart } from "../components/renderEmptyCart";
 import type { CartItem } from "../models/CartItem";
 
 
-//funktion - skapa html för varukorgen
+// Funktion som skapar HTML för varukorgsartiklar
 export const createHtmlCartItems = (shoppingCart: CartItem[]) => {
-  // // Tar in varukorgen som parameter
+  // Tar in varukorgen som parameter och skapar HTML-element för varje artikel
   const cartItemsContainer = document.getElementById(
     "cartItems"
   ) as HTMLDivElement;
@@ -20,7 +20,7 @@ export const createHtmlCartItems = (shoppingCart: CartItem[]) => {
   
   renderEmptyCart(shoppingCart);
 
-  //loopa varukorgen
+  // Loopar igenom varje artikel i varukorgen och skapar HTML-element
   shoppingCart.forEach((item, index) => {
     const cartItem = document.createElement("div"); //Skapar ett cart item
     cartItem.className = "cartItem";
@@ -39,7 +39,7 @@ export const createHtmlCartItems = (shoppingCart: CartItem[]) => {
       createHtmlCartItems
     );
 
-    // Bygg ihop hela kortet
+    // Bygger ihop hela kortet
     cartItem.appendChild(cartProduct);
     cartItem.appendChild(cartQuantity);
     cartItem.appendChild(cartPrice);
