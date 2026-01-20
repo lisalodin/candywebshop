@@ -13,12 +13,9 @@ import { loadCart } from "./services/cartStorage";
 import { createHtmlCartItems } from "./pages/createHtmlCartItems";
 import { payBtn } from "./components/payBtn";
 import { updateCartBadge } from "./utils/cartIconQuantity";
-<<<<<<< HEAD
 import { setupCategoryFilters } from "./utils/filterProducts";
 import { initProductPageDetails } from "./utils/productPageDetails";
-=======
 import { renderCheckoutPriceSummary } from "./components/renderCheckoutPriceSummary";
->>>>>>> feature-totalprice-checkout
 
 mobileMenu();
 
