@@ -69,7 +69,7 @@ export const createHtmlProductPage = (
     // sista produkterna i grid2
     products.slice(4, 15).forEach(product => {
         const card = createProductCard(product);
-        productGrid2.appendChild(createProductCard(product));
+        productGrid2.appendChild(card);
     });
 
     return productPageContainer;

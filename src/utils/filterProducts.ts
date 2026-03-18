@@ -6,7 +6,7 @@ export function filterProductsByCategory(products: Product[], category: string):
 }
 
 // Funktion för att hantera knappklick och filtrera produktkort i DOM
-export function setupCategoryFilters(products: Product[]) {
+export function setupCategoryFilters() {
     const sweetBtn = document.getElementById("sott");
     const sourBtn = document.getElementById("surt");
     const saltBtn = document.getElementById("salt");

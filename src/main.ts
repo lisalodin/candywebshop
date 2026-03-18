@@ -79,4 +79,4 @@ renderCheckoutPriceSummary();
 payBtn();
 
 // Filtrering av produkter efter kategori på landningssidan
-setupCategoryFilters(products);
+setupCategoryFilters();
