@@ -4,7 +4,7 @@ import { Product } from "../models/Product";
 //ex: products[i].name (kolla models/Product för att se egenskaps-namn)
 export const products: Product[] = [
     new Product(
-        "/src/assets/produktbilder/surakarameller.jpg",
+        "/assets/produktbilder/surakarameller.jpg",
         "Zing-Zong Zour",
         "Sensationellt sura!",
         8.9,
@@ -12,7 +12,7 @@ export const products: Product[] = [
         "Superduper-sur godis som får kinderna att dra ihop sig och mungiporna att le. Varning: kittelfeeling!"
     ),
     new Product(
-        "/src/assets/produktbilder/polkaklubba.jpg",
+        "/assets/produktbilder/polkaklubba.jpg",
         "Swirly Polka",
         "Nostalgiskt god klubba",
         12.9,
@@ -20,7 +20,7 @@ export const products: Product[] = [
         "Snurrig klubba i glada färger med polkasmak. Ser ut som en karusell, smakar som ett skratt."
     ),
     new Product(
-        "/src/assets/produktbilder/fruity.jpg",
+        "/assets/produktbilder/fruity.jpg",
         "Farmors Fruity",
         "Njut av en klassiker",
         8.9,
@@ -28,7 +28,7 @@ export const products: Product[] = [
         "Fruktigt mjukisar som smakar tryggt, glatt och lite busigt. Farmor hade absolut godkänt… efter en provsmak."
     ),
     new Product(
-        "/src/assets/produktbilder/fizzy.jpg",
+        "/assets/produktbilder/fizzy.jpg",
         "Fizzy Bombz",
         "Med sprudlande smak!",
         8.9,
@@ -36,7 +36,7 @@ export const products: Product[] = [
         "Plopp! Små godisbitar som bubblar, fräser och överraskar. Som fyrverkerier i munnen – fast godare."
     ),
     new Product(
-        "/src/assets/produktbilder/suraremmar.jpg",
+        "/assets/produktbilder/suraremmar.jpg",
         "Sour Swirls",
         "Svindlande goda!",
         8.9,
@@ -44,7 +44,7 @@ export const products: Product[] = [
         "Snurrigt surt godis med maximal syra och minimal självkontroll. Läppar i putläge garanteras."
     ),
     new Product(
-        "/src/assets/produktbilder/mashmallows.jpg",
+        "/assets/produktbilder/mashmallows.jpg",
         "Marshmallows",
         "Fantastiskt fluffiga",
         12.9,
@@ -52,7 +52,7 @@ export const products: Product[] = [
         "Mjuka moln av socker som studsar rakt in i munnen. Fluffigare än en dröm på sockervadd."
     ),
     new Product(
-        "/src/assets/produktbilder/hjartan.jpg",
+        "/assets/produktbilder/hjartan.jpg",
         "Kärlekshjärtan",
         "Sprider kärlek",
         8.9,
@@ -60,7 +60,7 @@ export const products: Product[] = [
         "Små hjärtan med söta budskap och ännu sötare smak. Perfekta att dela… eller behålla själv."
     ),
     new Product(
-        "/src/assets/produktbilder/bonor.jpg",
+        "/assets/produktbilder/bonor.jpg",
         "Dream Beans",
         "Runda, söta & fina",
         8.9,
@@ -68,7 +68,7 @@ export const products: Product[] = [
         "Färgglada bönor fulla av knasiga smaker. Varje näve är ett nytt äventyr för smaklökarna."
     ),
     new Product(
-        "/src/assets/produktbilder/banana-toffee.jpg",
+        "/assets/produktbilder/banana-toffee.jpg",
         "Bubbs",
         "Banan & toffee",
         8.9,
@@ -76,7 +76,7 @@ export const products: Product[] = [
         "Segt, studsigt skumgodis med banan och toffee. Smakar som om de två blev bästa vänner."
     ),
     new Product(
-        "/src/assets/produktbilder/saltavral.jpg",
+        "/assets/produktbilder/saltavral.jpg",
         "Saltvrål",
         "Supersalt!",
         8.9,
@@ -85,7 +85,7 @@ export const products: Product[] = [
     )
     ,
     new Product(
-        "/src/assets/produktbilder/hallonlakrits2.jpg",
+        "/assets/produktbilder/hallonlakrits2.jpg",
         "Rasporish Rolls",
         "Lagom salt & sött",
         8.9,
@@ -94,7 +94,7 @@ export const products: Product[] = [
     )
     ,
     new Product(
-        "/src/assets/produktbilder/saltaskallar2.jpg",
+        "/assets/produktbilder/saltaskallar2.jpg",
         "Salty Skulls",
         "Saltiga favoriter",
         8.9,

@@ -1,91 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <title>Godisråttan</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <section id="header">
-        <div class="header-banner">
-            <p>Fri frakt vid köp över 200kr.</p>
-        </div>
-        <div class="header-logo">
-            <img src="/src/assets/logo/godisrattan_logotyp.png" alt="Godisråttan">
-        </div>
+      <div class="header-banner">
+        <p>Fri frakt vid köp över 200kr.</p>
+      </div>
+      <div class="header-logo">
+        <img src="/assets/logo/godisrattan_logotyp.png" alt="Godisråttan" />
+      </div>
     </section>
 
     <nav id="navbar">
-        <div id="navbarContainer">
-            <button id="menuToggle" aria-label="Öppna meny">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <ul id="navLinks">
-                <li><a class="navLink" href="index.html">Hem</a></li>
-                <li><a class="navLink" href="#footer">Kontakt</a></li>
-                <li><a class="navLink" href="/product.html">Lösgodis</a></li>
-                <li>
-                    <form id="searchForm">
+      <div id="navbarContainer">
+        <button id="menuToggle" aria-label="Öppna meny">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul id="navLinks">
+          <li><a class="navLink" href="index.html">Hem</a></li>
+          <li><a class="navLink" href="#footer">Kontakt</a></li>
+          <li><a class="navLink" href="/product.html">Lösgodis</a></li>
+          <li>
+            <form id="searchForm">
               <input
                 id="searchInput"
                 type="text"
                 placeholder="Sök produkt..."
               />
             </form>
-                </li>
-                <li>
-                    <a class="cartIcon" href="/shoppingCart.html" aria-label="varukorg"><img
-                            src="/src/assets/ikoner/shopping_cart.svg" width="30px" alt="Varukorg" /></a>
-                </li>
-            </ul>
-        </div>
+          </li>
+          <li>
+            <a class="cartIcon" href="/shoppingCart.html" aria-label="varukorg"
+              ><img
+                src="/assets/ikoner/shopping_cart.svg"
+                width="30px"
+                alt="Varukorg"
+            /></a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
-    <div id=productPage>
-        <div id="productPageContainer">
-            <h1 id="productPageTitle">Lösgodis</h1>
-            <div id="categoryGrid">
-                <div id="sott">
-                    <img class="categoryImg" src="/src/assets/kategoribilder/analia-baggiano-AHegElpiVj4-unsplash.jpg"
-                        alt="sött">
-                    <div class="overlayText">
-                        <h2>Sött</h2>
-                    </div>
-                </div>
-                <div id="salt">
-                    <img class="categoryImg" src="/src/assets/kategoribilder/jonne-FEo9a5oBnaA-unsplash.jpg" alt="salt">
-                    <div class="overlayText">
-                        <h2>Salt</h2>
-                    </div>
-                </div>
-                <div id="surt">
-                    <img class="categoryImg" src="/src/assets/kategoribilder/kelly-brito-WLo9PkfUwHA-unsplash.jpg"
-                        alt="surt">
-                    <div class="overlayText">
-                        <h2>Surt</h2>
-                    </div>
-                </div>
+    <div id="productPage">
+      <div id="productPageContainer">
+        <h1 id="productPageTitle">Lösgodis</h1>
+        <div id="categoryGrid">
+          <div id="sott">
+            <img
+              class="categoryImg"
+              src="/assets/kategoribilder/analia-baggiano-AHegElpiVj4-unsplash.jpg"
+              alt="sött"
+            />
+            <div class="overlayText">
+              <h2>Sött</h2>
             </div>
-            <div id="showMoreBtnContainer">
-                <button id="showMoreBtn">
-                    Visa mer
-                </button>
+          </div>
+          <div id="salt">
+            <img
+              class="categoryImg"
+              src="/assets/kategoribilder/jonne-FEo9a5oBnaA-unsplash.jpg"
+              alt="salt"
+            />
+            <div class="overlayText">
+              <h2>Salt</h2>
             </div>
+          </div>
+          <div id="surt">
+            <img
+              class="categoryImg"
+              src="/assets/kategoribilder/kelly-brito-WLo9PkfUwHA-unsplash.jpg"
+              alt="surt"
+            />
+            <div class="overlayText">
+              <h2>Surt</h2>
+            </div>
+          </div>
         </div>
+        <div id="showMoreBtnContainer">
+          <button id="showMoreBtn">Visa mer</button>
+        </div>
+      </div>
     </div>
 
     <dialog id="productModal">
-        <div id="modalContainer">
-            <div class="btnContainer">
-                <button id="closeModal">x</button>
-            </div>
-            <div id="extDetailsContainer"></div>
+      <div id="modalContainer">
+        <div class="btnContainer">
+          <button id="closeModal">x</button>
         </div>
+        <div id="extDetailsContainer"></div>
+      </div>
     </dialog>
 
     <section id="footer">
@@ -110,10 +121,7 @@
           </div>
           <div class="footercolumn">
             <div class="footerLogo">
-              <img
-                class="footerLogo"
-                src="/src/assets/logo/godisrattan_logo.png"
-              />
+              <img class="footerLogo" src="/assets/logo/godisrattan_logo.png" />
             </div>
           </div>
           <div class="copyright">
@@ -125,6 +133,5 @@
     </section>
 
     <script type="module" src="/src/main.ts"></script>
-</body>
-
+  </body>
 </html>

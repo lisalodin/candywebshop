@@ -1,139 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <title>Godisråttan</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <title>Godisråttan</title>
-</head>
+  <body>
+    <section id="header">
+      <div class="header-banner">
+        <p>Fri frakt vid köp över 200kr.</p>
+      </div>
+      <div class="header-logo">
+        <img src="/assets/logo/godisrattan_logotyp.png" alt="Godisråttan" />
+      </div>
+    </section>
 
-<body>
-  <section id="header">
-    <div class="header-banner">
-      <p>Fri frakt vid köp över 200kr.</p>
-    </div>
-    <div class="header-logo">
-      <img src="/src/assets/logo/godisrattan_logotyp.png" alt="Godisråttan">
-    </div>
-  </section>
-
-
-  <nav id="navbar">
-    <div id="navbarContainer">
-      <button id="menuToggle" aria-label="Öppna meny">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-      <ul id="navLinks">
-        <li><a class="navLink" href="index.html">Hem</a></li>
-        <li><a class="navLink" href="#footer">Kontakt</a></li>
-        <li><a class="navLink" href="/product.html">Lösgodis</a></li>
-        <li>
-          <form id="searchForm">
+    <nav id="navbar">
+      <div id="navbarContainer">
+        <button id="menuToggle" aria-label="Öppna meny">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul id="navLinks">
+          <li><a class="navLink" href="index.html">Hem</a></li>
+          <li><a class="navLink" href="#footer">Kontakt</a></li>
+          <li><a class="navLink" href="/product.html">Lösgodis</a></li>
+          <li>
+            <form id="searchForm">
               <input
                 id="searchInput"
                 type="text"
                 placeholder="Sök produkt..."
               />
             </form>
-        </li>
-        <li>
-          <a class="cartIcon" href="/shoppingCart.html" aria-label="varukorg"><img
-              src="/src/assets/ikoner/shopping_cart.svg" width="30px" alt="Varukorg" /></a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <section id="checkout">
-    <div class="checkout-container">
-      <h1>Kassa</h1>
-      <button class="back-btn" id="backToCartBtn">← Tillbaka till varukorgen</button>
-      <div class="checkout-section">
-        <h2>Leveransuppgifter*</h2>
-        <div class="form-group">
-          <label for="firstname">Förnamn*</label>
-          <input type="text" id="firstname" placeholder="Förnamn" required>
-        </div>
-        <div class="form-group">
-          <label for="lastname">Efternamn*</label>
-          <input type="text" id="lastname" placeholder="Efternamn" required>
-        </div>
-        <div class="form-group">
-          <label for="address">Adress*</label>
-          <input type="text" id="address" placeholder="Adress" required>
-        </div>
-        <div class="form-group">
-          <label for="email">E-post*</label>
-          <input type="email" id="email" placeholder="E-post" required>
-        </div>
-        <div class="form-group">
-          <label for="phone">Telefon*</label>
-          <input type="tel" id="phone" placeholder="Telefon" required>
-        </div>
+          </li>
+          <li>
+            <a class="cartIcon" href="/shoppingCart.html" aria-label="varukorg"
+              ><img
+                src="/assets/ikoner/shopping_cart.svg"
+                width="30px"
+                alt="Varukorg"
+            /></a>
+          </li>
+        </ul>
       </div>
+    </nav>
 
-    <div class="checkout-section">
-      <h2>Fraktmetod*</h2>
-      <div class="radio-group">
-        <label>
-        <input type="radio" name="shipping" value="budbee" required>
-          Budbee 39 kr
-        </label>
-        <label>
-        <input type="radio" name="shipping" value="postbox">
-          Postlåda 39 kr
-        </label>
+    <section id="checkout">
+      <div class="checkout-container">
+        <h1>Kassa</h1>
+        <button class="back-btn" id="backToCartBtn">
+          ← Tillbaka till varukorgen
+        </button>
+        <div class="checkout-section">
+          <h2>Leveransuppgifter*</h2>
+          <div class="form-group">
+            <label for="firstname">Förnamn*</label>
+            <input type="text" id="firstname" placeholder="Förnamn" required />
+          </div>
+          <div class="form-group">
+            <label for="lastname">Efternamn*</label>
+            <input type="text" id="lastname" placeholder="Efternamn" required />
+          </div>
+          <div class="form-group">
+            <label for="address">Adress*</label>
+            <input type="text" id="address" placeholder="Adress" required />
+          </div>
+          <div class="form-group">
+            <label for="email">E-post*</label>
+            <input type="email" id="email" placeholder="E-post" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Telefon*</label>
+            <input type="tel" id="phone" placeholder="Telefon" required />
+          </div>
+        </div>
+
+        <div class="checkout-section">
+          <h2>Fraktmetod*</h2>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="shipping" value="budbee" required />
+              Budbee 39 kr
+            </label>
+            <label>
+              <input type="radio" name="shipping" value="postbox" />
+              Postlåda 39 kr
+            </label>
+          </div>
+        </div>
+
+        <div class="checkout-section">
+          <h2>Betalningsmetod*</h2>
+          <div class="radio-group">
+            <label>
+              <input type="radio" name="payment" value="bank" required />
+              Internetbank
+            </label>
+            <label>
+              <input type="radio" name="payment" value="klarna" />
+              Klarna
+            </label>
+          </div>
+        </div>
+
+        <div class="checkout-section order-summary">
+          <h2>Bekräftelse på din beställning:</h2>
+          <div id="checkoutItems"></div>
+          <div class="shipping-cost">
+            <span> Fraktkostnad:</span>
+            <span id="checkoutShipping">39 kr</span>
+          </div>
+          <div class="summary-total">
+            <span>Totalt att betala:</span>
+            <span id="checkoutTotal">0 kr</span>
+          </div>
+        </div>
+
+        <button class="pay-btn" id="payBtn">Betala</button>
+      </div>
+    </section>
+
+    <div id="errorPopup" class="popup hidden">
+      <div class="popup-content">
+        <h2>Hoppsan!</h2>
+        <p>
+          Försöker du smita?<br />
+          Du har inte fyllt i alla uppgifter ännu, <br />
+          vänligen testa betala igen när du gjort det.
+        </p>
+        <button id="closeErrorPopup">Okej, jag löser det!</button>
       </div>
     </div>
 
-    <div class="checkout-section">
-      <h2>Betalningsmetod*</h2>
-      <div class="radio-group">
-        <label>
-        <input type="radio" name="payment" value="bank" required>
-          Internetbank
-        </label>
-        <label>
-        <input type="radio" name="payment" value="klarna">
-          Klarna
-        </label>
-      </div>
-    </div>
-
-    <div class="checkout-section order-summary">
-      <h2>Bekräftelse på din beställning:</h2>
-      <div id="checkoutItems"></div> 
-      <div class="shipping-cost">
-        <span> Fraktkostnad:</span>
-        <span id="checkoutShipping">39 kr</span>
-      </div>
-      <div class="summary-total">
-        <span>Totalt att betala:</span>
-        <span id="checkoutTotal">0 kr</span>
-      </div>
-    </div>
-
-    <button class="pay-btn" id="payBtn">Betala</button>
-    </div>
-  </section>
-  
-
-<div id="errorPopup" class="popup hidden">
-  <div class="popup-content">
-    <h2>Hoppsan!</h2>
-    <p>
-      Försöker du smita?<br>
-      Du har inte fyllt i alla uppgifter ännu, <br>
-      vänligen testa betala igen när du gjort det.
-    </p>
-    <button id="closeErrorPopup">Okej, jag löser det!</button>
-  </div>
-</div>
-
-<dialog id="productModal">
+    <dialog id="productModal">
       <div id="modalContainer">
         <div class="btnContainer">
           <button id="closeModal">x</button>
@@ -142,7 +145,7 @@
       </div>
     </dialog>
 
-  <section id="footer">
+    <section id="footer">
       <footer>
         <div class="footercontainer">
           <div class="footercolumns">
@@ -164,10 +167,7 @@
           </div>
           <div class="footercolumn">
             <div class="footerLogo">
-              <img
-                class="footerLogo"
-                src="/src/assets/logo/godisrattan_logo.png"
-              />
+              <img class="footerLogo" src="/assets/logo/godisrattan_logo.png" />
             </div>
           </div>
           <div class="copyright">
@@ -178,18 +178,23 @@
       </footer>
     </section>
 
-  <!-- Orderbekräftelse popup -->
-  <div id="popup" class="popup hidden" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
-    <div class="popup-content">
-      <h2 id="popupTitle">Tack för ditt köp! 🍬</h2>
-      <p>
-        Din order har mottagits och behandlas.<br>
-        En orderbekräftelse har skickats till din e-post.
-      </p>
-      <button id="closePopup">Stäng</button>
+    <!-- Orderbekräftelse popup -->
+    <div
+      id="popup"
+      class="popup hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="popupTitle"
+    >
+      <div class="popup-content">
+        <h2 id="popupTitle">Tack för ditt köp! 🍬</h2>
+        <p>
+          Din order har mottagits och behandlas.<br />
+          En orderbekräftelse har skickats till din e-post.
+        </p>
+        <button id="closePopup">Stäng</button>
+      </div>
     </div>
-  </div>
-  <script type="module" src="/src/main.ts"></script>
-</body>
-
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>
